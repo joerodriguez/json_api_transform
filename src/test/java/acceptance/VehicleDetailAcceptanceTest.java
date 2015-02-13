@@ -52,7 +52,7 @@ public class VehicleDetailAcceptanceTest {
         RestAssured.when()
             .get("/vehicle/628611860")
             .then()
-            .body("listingId", equalTo("628611860"))
+            .body("listingId", equalTo(628611860))
             .body("model", equalTo("Highlander"))
             .body("year", equalTo(2015))
             .body("make", equalTo("Toyota"));
