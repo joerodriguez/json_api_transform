@@ -42,7 +42,7 @@ public class VehicleDetailAcceptanceTest {
     @Test
     public void testGetVehicleJson() {
         mockServerClient.when(
-            HttpRequest.request("/api/listings/628611860.json")
+            HttpRequest.request("/vehicledetail/detail/628611860.json")
         ).respond(
             HttpResponse
                 .response(Fixtures.read("vehicle_detail_success"))
@@ -53,6 +53,8 @@ public class VehicleDetailAcceptanceTest {
             .get("/vehicle/628611860")
             .then()
             .body("listingId", equalTo("628611860"))
+            .body("model", equalTo("Highlander"))
+            .body("year", equalTo(2015))
             .body("make", equalTo("Toyota"));
     }
 }
