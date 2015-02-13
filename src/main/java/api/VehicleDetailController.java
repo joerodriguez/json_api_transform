@@ -6,26 +6,22 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
+import util.Jolt;
 
 @RestController
+@RequestMapping(produces = "application/json")
 public class VehicleDetailController {
 
     @Value("${cars.listings.api}")
     String listingsApiRootUrl;
 
     @RequestMapping(value = "/vehicle/{listingId}", method = RequestMethod.GET)
-    public Vehicle showVehicle(
+    public String showVehicle(
         @PathVariable String listingId
     ) {
-        RestTemplate restTemplate = new RestTemplate();
-        Listing listing = restTemplate.getForObject(listingsApiRootUrl + "/vehicledetail/detail/" + listingId + ".json", Listing.class);
+        String url = listingsApiRootUrl + "/vehicledetail/detail/" + listingId + ".json";
 
-        String makeName = listing.getListingDetailDto().getMakeName();
-        String modelName = listing.getListingDetailDto().getModelName();
-        int year = listing.getListingDetailDto().getModelYear();
-
-        return new Vehicle(String.valueOf(listingId), makeName, modelName, year);
+        return Jolt.transform("listingDetail", url);
     }
 
     @JsonIgnoreProperties(ignoreUnknown = true)
