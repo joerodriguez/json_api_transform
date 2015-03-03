@@ -32,8 +32,8 @@
 2015-02-13 09:46:19,716 DEBUG [main] o.s.w.c.s.StandardServletEnvironment [AbstractEnvironment.java:126] Initialized StandardServletEnvironment with PropertySources [servletConfigInitParams,servletContextInitParams,jndiProperties,systemProperties,systemEnvironment]
 2015-02-13 09:46:20,470 INFO [main] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:315] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
 2015-02-13 09:46:20,666 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:114] Looking for request mappings in application context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3911c2a7: startup date [Fri Feb 13 09:46:16 CST 2015]; root of context hierarchy
-2015-02-13 09:46:20,684 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/vehicle/{listingId}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public api.VehicleDetailController$Vehicle api.VehicleDetailController.showVehicle(java.lang.String)
-2015-02-13 09:46:20,686 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2015-02-13 09:46:20,684 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/vehicle/{listingId}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.example.jsontransform.detail.VehicleDetailController$Vehicle com.example.jsontransform.detail.VehicleDetailController.showVehicle(java.lang.String)
+2015-02-13 09:46:20,686 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.com.example.jsontransform.common.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
 2015-02-13 09:46:20,688 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[text/html],custom=[]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest)
 2015-02-13 09:46:20,709 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping [AbstractDetectingUrlHandlerMapping.java:71] Looking for URL mappings in application context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3911c2a7: startup date [Fri Feb 13 09:46:16 CST 2015]; root of context hierarchy
 2015-02-13 09:46:20,710 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping [AbstractDetectingUrlHandlerMapping.java:86] Rejected bean name 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor': no URL paths identified
@@ -174,13 +174,13 @@
 2015-02-13 09:46:21,538 INFO [Thread-12] o.mockserver.mockserver.MockServer [MockServer.java:56] MockServer starting up on port: 8082
 2015-02-13 09:46:23,413 DEBUG [qtp677317086-21] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:838] DispatcherServlet with name 'dispatcherServlet' processing GET request for [/vehicle/628611860]
 2015-02-13 09:46:23,420 DEBUG [qtp677317086-21] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:246] Looking up handler method for path /vehicle/628611860
-2015-02-13 09:46:23,425 DEBUG [qtp677317086-21] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:251] Returning handler method [public api.VehicleDetailController$Vehicle api.VehicleDetailController.showVehicle(java.lang.String)]
+2015-02-13 09:46:23,425 DEBUG [qtp677317086-21] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:251] Returning handler method [public com.example.jsontransform.detail.VehicleDetailController$Vehicle com.example.jsontransform.detail.VehicleDetailController.showVehicle(java.lang.String)]
 2015-02-13 09:46:23,426 DEBUG [qtp677317086-21] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:925] Last-Modified value for [/vehicle/628611860] is: -1
-2015-02-13 09:46:23,487 DEBUG [qtp677317086-21] o.s.web.client.RestTemplate [HttpAccessor.java:78] Created GET request for "http://localhost:8082/api/listings/628611860.json"
+2015-02-13 09:46:23,487 DEBUG [qtp677317086-21] o.s.web.client.RestTemplate [HttpAccessor.java:78] Created GET request for "http://localhost:8082/com.example.jsontransform.api/listings/628611860.json"
 2015-02-13 09:46:23,491 DEBUG [qtp677317086-21] o.s.web.client.RestTemplate [RestTemplate.java:679] Setting request Accept header to [application/json, application/*+json]
-2015-02-13 09:46:23,547 DEBUG [qtp677317086-21] o.s.web.client.RestTemplate [RestTemplate.java:579] GET request for "http://localhost:8082/api/listings/628611860.json" resulted in 200 (OK)
-2015-02-13 09:46:23,549 DEBUG [qtp677317086-21] o.s.web.client.RestTemplate [HttpMessageConverterExtractor.java:92] Reading [class api.VehicleDetailController$Listing] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@6f166037]
-2015-02-13 09:46:23,582 DEBUG [qtp677317086-21] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor [AbstractMessageConverterMethodProcessor.java:145] Written [api.VehicleDetailController$Vehicle@6d6f4e8c] as "application/json;charset=UTF-8" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@103d4a69]
+2015-02-13 09:46:23,547 DEBUG [qtp677317086-21] o.s.web.client.RestTemplate [RestTemplate.java:579] GET request for "http://localhost:8082/com.example.jsontransform.api/listings/628611860.json" resulted in 200 (OK)
+2015-02-13 09:46:23,549 DEBUG [qtp677317086-21] o.s.web.client.RestTemplate [HttpMessageConverterExtractor.java:92] Reading [class com.example.jsontransform.detail.VehicleDetailController$Listing] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@6f166037]
+2015-02-13 09:46:23,582 DEBUG [qtp677317086-21] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor [AbstractMessageConverterMethodProcessor.java:145] Written [com.example.jsontransform.detail.VehicleDetailController$Vehicle@6d6f4e8c] as "application/json;charset=UTF-8" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@103d4a69]
 2015-02-13 09:46:23,582 DEBUG [qtp677317086-21] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:1012] Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
 2015-02-13 09:46:23,583 DEBUG [qtp677317086-21] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java:991] Successfully completed request
 2015-02-13 09:50:33,092 DEBUG [main] o.s.w.c.s.StandardServletEnvironment [MutablePropertySources.java:111] Adding [servletConfigInitParams] PropertySource with lowest search precedence
@@ -217,8 +217,8 @@
 2015-02-13 09:50:35,598 DEBUG [main] o.s.w.c.s.StandardServletEnvironment [AbstractEnvironment.java:126] Initialized StandardServletEnvironment with PropertySources [servletConfigInitParams,servletContextInitParams,jndiProperties,systemProperties,systemEnvironment]
 2015-02-13 09:50:36,143 INFO [main] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:315] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
 2015-02-13 09:50:36,313 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:114] Looking for request mappings in application context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3911c2a7: startup date [Fri Feb 13 09:50:33 CST 2015]; root of context hierarchy
-2015-02-13 09:50:36,324 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/vehicle/{listingId}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public api.VehicleDetailController$Vehicle api.VehicleDetailController.showVehicle(java.lang.String)
-2015-02-13 09:50:36,327 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2015-02-13 09:50:36,324 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/vehicle/{listingId}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.example.jsontransform.detail.VehicleDetailController$Vehicle com.example.jsontransform.detail.VehicleDetailController.showVehicle(java.lang.String)
+2015-02-13 09:50:36,327 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.com.example.jsontransform.common.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
 2015-02-13 09:50:36,327 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[text/html],custom=[]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest)
 2015-02-13 09:50:36,347 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping [AbstractDetectingUrlHandlerMapping.java:71] Looking for URL mappings in application context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3911c2a7: startup date [Fri Feb 13 09:50:33 CST 2015]; root of context hierarchy
 2015-02-13 09:50:36,348 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping [AbstractDetectingUrlHandlerMapping.java:86] Rejected bean name 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor': no URL paths identified
@@ -359,13 +359,13 @@
 2015-02-13 09:50:37,079 INFO [Thread-12] o.mockserver.mockserver.MockServer [MockServer.java:56] MockServer starting up on port: 8082
 2015-02-13 09:50:38,980 DEBUG [qtp1894144426-20] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:838] DispatcherServlet with name 'dispatcherServlet' processing GET request for [/vehicle/628611860]
 2015-02-13 09:50:38,989 DEBUG [qtp1894144426-20] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:246] Looking up handler method for path /vehicle/628611860
-2015-02-13 09:50:38,996 DEBUG [qtp1894144426-20] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:251] Returning handler method [public api.VehicleDetailController$Vehicle api.VehicleDetailController.showVehicle(java.lang.String)]
+2015-02-13 09:50:38,996 DEBUG [qtp1894144426-20] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:251] Returning handler method [public com.example.jsontransform.detail.VehicleDetailController$Vehicle com.example.jsontransform.detail.VehicleDetailController.showVehicle(java.lang.String)]
 2015-02-13 09:50:38,997 DEBUG [qtp1894144426-20] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:925] Last-Modified value for [/vehicle/628611860] is: -1
 2015-02-13 09:50:39,053 DEBUG [qtp1894144426-20] o.s.web.client.RestTemplate [HttpAccessor.java:78] Created GET request for "http://www.cars.com/vehicledetail/detail/628611860.json"
 2015-02-13 09:50:39,057 DEBUG [qtp1894144426-20] o.s.web.client.RestTemplate [RestTemplate.java:679] Setting request Accept header to [application/json, application/*+json]
 2015-02-13 09:50:39,135 DEBUG [qtp1894144426-20] o.s.web.client.RestTemplate [RestTemplate.java:579] GET request for "http://www.cars.com/vehicledetail/detail/628611860.json" resulted in 200 (OK)
-2015-02-13 09:50:39,136 DEBUG [qtp1894144426-20] o.s.web.client.RestTemplate [HttpMessageConverterExtractor.java:92] Reading [class api.VehicleDetailController$Listing] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@52794b9a]
-2015-02-13 09:50:39,163 DEBUG [qtp1894144426-20] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor [AbstractMessageConverterMethodProcessor.java:145] Written [api.VehicleDetailController$Vehicle@59f16ee9] as "application/json;charset=UTF-8" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@7c98ac90]
+2015-02-13 09:50:39,136 DEBUG [qtp1894144426-20] o.s.web.client.RestTemplate [HttpMessageConverterExtractor.java:92] Reading [class com.example.jsontransform.detail.VehicleDetailController$Listing] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@52794b9a]
+2015-02-13 09:50:39,163 DEBUG [qtp1894144426-20] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor [AbstractMessageConverterMethodProcessor.java:145] Written [com.example.jsontransform.detail.VehicleDetailController$Vehicle@59f16ee9] as "application/json;charset=UTF-8" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@7c98ac90]
 2015-02-13 09:50:39,163 DEBUG [qtp1894144426-20] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:1012] Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
 2015-02-13 09:50:39,163 DEBUG [qtp1894144426-20] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java:991] Successfully completed request
 2015-02-13 09:56:00,949 DEBUG [main] o.s.w.c.s.StandardServletEnvironment [MutablePropertySources.java:111] Adding [servletConfigInitParams] PropertySource with lowest search precedence
@@ -402,8 +402,8 @@
 2015-02-13 09:56:03,503 DEBUG [main] o.s.w.c.s.StandardServletEnvironment [AbstractEnvironment.java:126] Initialized StandardServletEnvironment with PropertySources [servletConfigInitParams,servletContextInitParams,jndiProperties,systemProperties,systemEnvironment]
 2015-02-13 09:56:04,020 INFO [main] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:315] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
 2015-02-13 09:56:04,151 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:114] Looking for request mappings in application context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3911c2a7: startup date [Fri Feb 13 09:56:01 CST 2015]; root of context hierarchy
-2015-02-13 09:56:04,164 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/vehicle/{listingId}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public api.VehicleDetailController$Vehicle api.VehicleDetailController.showVehicle(java.lang.String)
-2015-02-13 09:56:04,166 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2015-02-13 09:56:04,164 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/vehicle/{listingId}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.example.jsontransform.detail.VehicleDetailController$Vehicle com.example.jsontransform.detail.VehicleDetailController.showVehicle(java.lang.String)
+2015-02-13 09:56:04,166 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.com.example.jsontransform.common.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
 2015-02-13 09:56:04,166 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[text/html],custom=[]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest)
 2015-02-13 09:56:04,178 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping [AbstractDetectingUrlHandlerMapping.java:71] Looking for URL mappings in application context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3911c2a7: startup date [Fri Feb 13 09:56:01 CST 2015]; root of context hierarchy
 2015-02-13 09:56:04,178 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping [AbstractDetectingUrlHandlerMapping.java:86] Rejected bean name 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor': no URL paths identified
@@ -544,13 +544,13 @@
 2015-02-13 09:56:04,823 INFO [Thread-12] o.mockserver.mockserver.MockServer [MockServer.java:56] MockServer starting up on port: 8082
 2015-02-13 09:56:06,537 DEBUG [qtp1894144426-20] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:838] DispatcherServlet with name 'dispatcherServlet' processing GET request for [/vehicle/628611860]
 2015-02-13 09:56:06,542 DEBUG [qtp1894144426-20] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:246] Looking up handler method for path /vehicle/628611860
-2015-02-13 09:56:06,548 DEBUG [qtp1894144426-20] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:251] Returning handler method [public api.VehicleDetailController$Vehicle api.VehicleDetailController.showVehicle(java.lang.String)]
+2015-02-13 09:56:06,548 DEBUG [qtp1894144426-20] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:251] Returning handler method [public com.example.jsontransform.detail.VehicleDetailController$Vehicle com.example.jsontransform.detail.VehicleDetailController.showVehicle(java.lang.String)]
 2015-02-13 09:56:06,549 DEBUG [qtp1894144426-20] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:925] Last-Modified value for [/vehicle/628611860] is: -1
 2015-02-13 09:56:06,602 DEBUG [qtp1894144426-20] o.s.web.client.RestTemplate [HttpAccessor.java:78] Created GET request for "http://www.cars.com/vehicledetail/detail/628611860.json"
 2015-02-13 09:56:06,606 DEBUG [qtp1894144426-20] o.s.web.client.RestTemplate [RestTemplate.java:679] Setting request Accept header to [application/json, application/*+json]
 2015-02-13 09:56:06,703 DEBUG [qtp1894144426-20] o.s.web.client.RestTemplate [RestTemplate.java:579] GET request for "http://www.cars.com/vehicledetail/detail/628611860.json" resulted in 200 (OK)
-2015-02-13 09:56:06,703 DEBUG [qtp1894144426-20] o.s.web.client.RestTemplate [HttpMessageConverterExtractor.java:92] Reading [class api.VehicleDetailController$Listing] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@7c999d9d]
-2015-02-13 09:56:06,728 DEBUG [qtp1894144426-20] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor [AbstractMessageConverterMethodProcessor.java:145] Written [api.VehicleDetailController$Vehicle@65ec4115] as "application/json;charset=UTF-8" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@3d18ffdd]
+2015-02-13 09:56:06,703 DEBUG [qtp1894144426-20] o.s.web.client.RestTemplate [HttpMessageConverterExtractor.java:92] Reading [class com.example.jsontransform.detail.VehicleDetailController$Listing] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@7c999d9d]
+2015-02-13 09:56:06,728 DEBUG [qtp1894144426-20] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor [AbstractMessageConverterMethodProcessor.java:145] Written [com.example.jsontransform.detail.VehicleDetailController$Vehicle@65ec4115] as "application/json;charset=UTF-8" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@3d18ffdd]
 2015-02-13 09:56:06,729 DEBUG [qtp1894144426-20] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:1012] Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
 2015-02-13 09:56:06,729 DEBUG [qtp1894144426-20] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java:991] Successfully completed request
 2015-02-13 09:57:37,997 DEBUG [main] o.s.w.c.s.StandardServletEnvironment [MutablePropertySources.java:111] Adding [servletConfigInitParams] PropertySource with lowest search precedence
@@ -587,8 +587,8 @@
 2015-02-13 09:57:40,517 DEBUG [main] o.s.w.c.s.StandardServletEnvironment [AbstractEnvironment.java:126] Initialized StandardServletEnvironment with PropertySources [servletConfigInitParams,servletContextInitParams,jndiProperties,systemProperties,systemEnvironment]
 2015-02-13 09:57:41,041 INFO [main] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:315] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
 2015-02-13 09:57:41,173 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:114] Looking for request mappings in application context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3911c2a7: startup date [Fri Feb 13 09:57:38 CST 2015]; root of context hierarchy
-2015-02-13 09:57:41,187 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/vehicle/{listingId}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public api.VehicleDetailController$Vehicle api.VehicleDetailController.showVehicle(java.lang.String)
-2015-02-13 09:57:41,188 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2015-02-13 09:57:41,187 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/vehicle/{listingId}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.example.jsontransform.detail.VehicleDetailController$Vehicle com.example.jsontransform.detail.VehicleDetailController.showVehicle(java.lang.String)
+2015-02-13 09:57:41,188 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.com.example.jsontransform.common.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
 2015-02-13 09:57:41,188 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[text/html],custom=[]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest)
 2015-02-13 09:57:41,207 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping [AbstractDetectingUrlHandlerMapping.java:71] Looking for URL mappings in application context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3911c2a7: startup date [Fri Feb 13 09:57:38 CST 2015]; root of context hierarchy
 2015-02-13 09:57:41,208 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping [AbstractDetectingUrlHandlerMapping.java:86] Rejected bean name 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor': no URL paths identified
@@ -729,13 +729,13 @@
 2015-02-13 09:57:41,875 INFO [Thread-12] o.mockserver.mockserver.MockServer [MockServer.java:56] MockServer starting up on port: 8082
 2015-02-13 09:57:43,321 DEBUG [qtp1894144426-19] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:838] DispatcherServlet with name 'dispatcherServlet' processing GET request for [/vehicle/628611860]
 2015-02-13 09:57:43,325 DEBUG [qtp1894144426-19] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:246] Looking up handler method for path /vehicle/628611860
-2015-02-13 09:57:43,330 DEBUG [qtp1894144426-19] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:251] Returning handler method [public api.VehicleDetailController$Vehicle api.VehicleDetailController.showVehicle(java.lang.String)]
+2015-02-13 09:57:43,330 DEBUG [qtp1894144426-19] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:251] Returning handler method [public com.example.jsontransform.detail.VehicleDetailController$Vehicle com.example.jsontransform.detail.VehicleDetailController.showVehicle(java.lang.String)]
 2015-02-13 09:57:43,331 DEBUG [qtp1894144426-19] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:925] Last-Modified value for [/vehicle/628611860] is: -1
 2015-02-13 09:57:43,382 DEBUG [qtp1894144426-19] o.s.web.client.RestTemplate [HttpAccessor.java:78] Created GET request for "http://www.cars.com/vehicledetail/detail/628611860.json"
 2015-02-13 09:57:43,386 DEBUG [qtp1894144426-19] o.s.web.client.RestTemplate [RestTemplate.java:679] Setting request Accept header to [application/json, application/*+json]
 2015-02-13 09:57:43,463 DEBUG [qtp1894144426-19] o.s.web.client.RestTemplate [RestTemplate.java:579] GET request for "http://www.cars.com/vehicledetail/detail/628611860.json" resulted in 200 (OK)
-2015-02-13 09:57:43,464 DEBUG [qtp1894144426-19] o.s.web.client.RestTemplate [HttpMessageConverterExtractor.java:92] Reading [class api.VehicleDetailController$Listing] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@5745b49f]
-2015-02-13 09:57:43,491 DEBUG [qtp1894144426-19] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor [AbstractMessageConverterMethodProcessor.java:145] Written [api.VehicleDetailController$Vehicle@7f101df6] as "application/json;charset=UTF-8" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@79db4acf]
+2015-02-13 09:57:43,464 DEBUG [qtp1894144426-19] o.s.web.client.RestTemplate [HttpMessageConverterExtractor.java:92] Reading [class com.example.jsontransform.detail.VehicleDetailController$Listing] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@5745b49f]
+2015-02-13 09:57:43,491 DEBUG [qtp1894144426-19] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor [AbstractMessageConverterMethodProcessor.java:145] Written [com.example.jsontransform.detail.VehicleDetailController$Vehicle@7f101df6] as "application/json;charset=UTF-8" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@79db4acf]
 2015-02-13 09:57:43,492 DEBUG [qtp1894144426-19] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:1012] Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
 2015-02-13 09:57:43,492 DEBUG [qtp1894144426-19] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java:991] Successfully completed request
 2015-02-13 09:58:27,845 DEBUG [main] o.s.w.c.s.StandardServletEnvironment [MutablePropertySources.java:111] Adding [servletConfigInitParams] PropertySource with lowest search precedence
@@ -772,8 +772,8 @@
 2015-02-13 09:58:30,464 DEBUG [main] o.s.w.c.s.StandardServletEnvironment [AbstractEnvironment.java:126] Initialized StandardServletEnvironment with PropertySources [servletConfigInitParams,servletContextInitParams,jndiProperties,systemProperties,systemEnvironment]
 2015-02-13 09:58:30,987 INFO [main] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:315] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
 2015-02-13 09:58:31,147 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:114] Looking for request mappings in application context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3911c2a7: startup date [Fri Feb 13 09:58:28 CST 2015]; root of context hierarchy
-2015-02-13 09:58:31,159 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/vehicle/{listingId}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public api.VehicleDetailController$Vehicle api.VehicleDetailController.showVehicle(java.lang.String)
-2015-02-13 09:58:31,162 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2015-02-13 09:58:31,159 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/vehicle/{listingId}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.example.jsontransform.detail.VehicleDetailController$Vehicle com.example.jsontransform.detail.VehicleDetailController.showVehicle(java.lang.String)
+2015-02-13 09:58:31,162 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.com.example.jsontransform.common.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
 2015-02-13 09:58:31,162 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[text/html],custom=[]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest)
 2015-02-13 09:58:31,181 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping [AbstractDetectingUrlHandlerMapping.java:71] Looking for URL mappings in application context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3911c2a7: startup date [Fri Feb 13 09:58:28 CST 2015]; root of context hierarchy
 2015-02-13 09:58:31,182 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping [AbstractDetectingUrlHandlerMapping.java:86] Rejected bean name 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor': no URL paths identified
@@ -914,13 +914,13 @@
 2015-02-13 09:58:31,863 INFO [Thread-12] o.mockserver.mockserver.MockServer [MockServer.java:56] MockServer starting up on port: 8082
 2015-02-13 09:58:33,617 DEBUG [qtp1894144426-20] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:838] DispatcherServlet with name 'dispatcherServlet' processing GET request for [/vehicle/628611860]
 2015-02-13 09:58:33,622 DEBUG [qtp1894144426-20] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:246] Looking up handler method for path /vehicle/628611860
-2015-02-13 09:58:33,627 DEBUG [qtp1894144426-20] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:251] Returning handler method [public api.VehicleDetailController$Vehicle api.VehicleDetailController.showVehicle(java.lang.String)]
+2015-02-13 09:58:33,627 DEBUG [qtp1894144426-20] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:251] Returning handler method [public com.example.jsontransform.detail.VehicleDetailController$Vehicle com.example.jsontransform.detail.VehicleDetailController.showVehicle(java.lang.String)]
 2015-02-13 09:58:33,628 DEBUG [qtp1894144426-20] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:925] Last-Modified value for [/vehicle/628611860] is: -1
 2015-02-13 09:58:33,679 DEBUG [qtp1894144426-20] o.s.web.client.RestTemplate [HttpAccessor.java:78] Created GET request for "http://www.cars.com/vehicledetail/detail/628611860.json"
 2015-02-13 09:58:33,684 DEBUG [qtp1894144426-20] o.s.web.client.RestTemplate [RestTemplate.java:679] Setting request Accept header to [application/json, application/*+json]
 2015-02-13 09:58:33,895 DEBUG [qtp1894144426-20] o.s.web.client.RestTemplate [RestTemplate.java:579] GET request for "http://www.cars.com/vehicledetail/detail/628611860.json" resulted in 200 (OK)
-2015-02-13 09:58:33,896 DEBUG [qtp1894144426-20] o.s.web.client.RestTemplate [HttpMessageConverterExtractor.java:92] Reading [class api.VehicleDetailController$Listing] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@1c9e20c8]
-2015-02-13 09:58:33,920 DEBUG [qtp1894144426-20] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor [AbstractMessageConverterMethodProcessor.java:145] Written [api.VehicleDetailController$Vehicle@492b5c5b] as "application/json;charset=UTF-8" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@1675720c]
+2015-02-13 09:58:33,896 DEBUG [qtp1894144426-20] o.s.web.client.RestTemplate [HttpMessageConverterExtractor.java:92] Reading [class com.example.jsontransform.detail.VehicleDetailController$Listing] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@1c9e20c8]
+2015-02-13 09:58:33,920 DEBUG [qtp1894144426-20] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor [AbstractMessageConverterMethodProcessor.java:145] Written [com.example.jsontransform.detail.VehicleDetailController$Vehicle@492b5c5b] as "application/json;charset=UTF-8" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@1675720c]
 2015-02-13 09:58:33,921 DEBUG [qtp1894144426-20] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:1012] Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
 2015-02-13 09:58:33,921 DEBUG [qtp1894144426-20] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java:991] Successfully completed request
 2015-02-13 09:58:59,260 DEBUG [main] o.s.w.c.s.StandardServletEnvironment [MutablePropertySources.java:111] Adding [servletConfigInitParams] PropertySource with lowest search precedence
@@ -957,8 +957,8 @@
 2015-02-13 09:59:01,749 DEBUG [main] o.s.w.c.s.StandardServletEnvironment [AbstractEnvironment.java:126] Initialized StandardServletEnvironment with PropertySources [servletConfigInitParams,servletContextInitParams,jndiProperties,systemProperties,systemEnvironment]
 2015-02-13 09:59:02,237 INFO [main] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:315] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
 2015-02-13 09:59:02,384 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:114] Looking for request mappings in application context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3911c2a7: startup date [Fri Feb 13 09:58:59 CST 2015]; root of context hierarchy
-2015-02-13 09:59:02,398 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/vehicle/{listingId}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public api.VehicleDetailController$Vehicle api.VehicleDetailController.showVehicle(java.lang.String)
-2015-02-13 09:59:02,400 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2015-02-13 09:59:02,398 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/vehicle/{listingId}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.example.jsontransform.detail.VehicleDetailController$Vehicle com.example.jsontransform.detail.VehicleDetailController.showVehicle(java.lang.String)
+2015-02-13 09:59:02,400 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.com.example.jsontransform.common.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
 2015-02-13 09:59:02,400 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[text/html],custom=[]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest)
 2015-02-13 09:59:02,420 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping [AbstractDetectingUrlHandlerMapping.java:71] Looking for URL mappings in application context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3911c2a7: startup date [Fri Feb 13 09:58:59 CST 2015]; root of context hierarchy
 2015-02-13 09:59:02,420 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping [AbstractDetectingUrlHandlerMapping.java:86] Rejected bean name 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor': no URL paths identified
@@ -1099,13 +1099,13 @@
 2015-02-13 09:59:03,055 INFO [Thread-12] o.mockserver.mockserver.MockServer [MockServer.java:56] MockServer starting up on port: 8082
 2015-02-13 09:59:04,471 DEBUG [qtp1894144426-19] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:838] DispatcherServlet with name 'dispatcherServlet' processing GET request for [/vehicle/628611860]
 2015-02-13 09:59:04,476 DEBUG [qtp1894144426-19] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:246] Looking up handler method for path /vehicle/628611860
-2015-02-13 09:59:04,480 DEBUG [qtp1894144426-19] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:251] Returning handler method [public api.VehicleDetailController$Vehicle api.VehicleDetailController.showVehicle(java.lang.String)]
+2015-02-13 09:59:04,480 DEBUG [qtp1894144426-19] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:251] Returning handler method [public com.example.jsontransform.detail.VehicleDetailController$Vehicle com.example.jsontransform.detail.VehicleDetailController.showVehicle(java.lang.String)]
 2015-02-13 09:59:04,481 DEBUG [qtp1894144426-19] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:925] Last-Modified value for [/vehicle/628611860] is: -1
 2015-02-13 09:59:04,531 DEBUG [qtp1894144426-19] o.s.web.client.RestTemplate [HttpAccessor.java:78] Created GET request for "http://www.cars.com/vehicledetail/detail/628611860.json"
 2015-02-13 09:59:04,534 DEBUG [qtp1894144426-19] o.s.web.client.RestTemplate [RestTemplate.java:679] Setting request Accept header to [application/json, application/*+json]
 2015-02-13 09:59:04,623 DEBUG [qtp1894144426-19] o.s.web.client.RestTemplate [RestTemplate.java:579] GET request for "http://www.cars.com/vehicledetail/detail/628611860.json" resulted in 200 (OK)
-2015-02-13 09:59:04,624 DEBUG [qtp1894144426-19] o.s.web.client.RestTemplate [HttpMessageConverterExtractor.java:92] Reading [class api.VehicleDetailController$Listing] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@21f0c63f]
-2015-02-13 09:59:04,655 DEBUG [qtp1894144426-19] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor [AbstractMessageConverterMethodProcessor.java:145] Written [api.VehicleDetailController$Vehicle@f117e1] as "application/json;charset=UTF-8" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@6db56a1]
+2015-02-13 09:59:04,624 DEBUG [qtp1894144426-19] o.s.web.client.RestTemplate [HttpMessageConverterExtractor.java:92] Reading [class com.example.jsontransform.detail.VehicleDetailController$Listing] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@21f0c63f]
+2015-02-13 09:59:04,655 DEBUG [qtp1894144426-19] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor [AbstractMessageConverterMethodProcessor.java:145] Written [com.example.jsontransform.detail.VehicleDetailController$Vehicle@f117e1] as "application/json;charset=UTF-8" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@6db56a1]
 2015-02-13 09:59:04,657 DEBUG [qtp1894144426-19] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:1012] Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
 2015-02-13 09:59:04,658 DEBUG [qtp1894144426-19] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java:991] Successfully completed request
 2015-02-13 10:03:56,937 INFO [Thread-15] o.mockserver.mockserver.MockServer [MockServer.java:56] MockServer starting up on port: 8082
@@ -1143,8 +1143,8 @@
 2015-02-13 10:06:17,491 DEBUG [main] o.s.w.c.s.StandardServletEnvironment [AbstractEnvironment.java:126] Initialized StandardServletEnvironment with PropertySources [servletConfigInitParams,servletContextInitParams,jndiProperties,systemProperties,systemEnvironment]
 2015-02-13 10:06:18,051 INFO [main] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:315] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
 2015-02-13 10:06:18,210 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:114] Looking for request mappings in application context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3911c2a7: startup date [Fri Feb 13 10:06:14 CST 2015]; root of context hierarchy
-2015-02-13 10:06:18,222 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/vehicle/{listingId}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public api.VehicleDetailController$Vehicle api.VehicleDetailController.showVehicle(java.lang.String)
-2015-02-13 10:06:18,225 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2015-02-13 10:06:18,222 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/vehicle/{listingId}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.example.jsontransform.detail.VehicleDetailController$Vehicle com.example.jsontransform.detail.VehicleDetailController.showVehicle(java.lang.String)
+2015-02-13 10:06:18,225 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.com.example.jsontransform.common.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
 2015-02-13 10:06:18,225 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[text/html],custom=[]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest)
 2015-02-13 10:06:18,241 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping [AbstractDetectingUrlHandlerMapping.java:71] Looking for URL mappings in application context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3911c2a7: startup date [Fri Feb 13 10:06:14 CST 2015]; root of context hierarchy
 2015-02-13 10:06:18,242 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping [AbstractDetectingUrlHandlerMapping.java:86] Rejected bean name 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor': no URL paths identified
@@ -1285,13 +1285,13 @@
 2015-02-13 10:06:19,026 INFO [Thread-12] o.mockserver.mockserver.MockServer [MockServer.java:56] MockServer starting up on port: 8082
 2015-02-13 10:06:21,477 DEBUG [qtp1894144426-21] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:838] DispatcherServlet with name 'dispatcherServlet' processing GET request for [/vehicle/628611860]
 2015-02-13 10:06:21,481 DEBUG [qtp1894144426-21] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:246] Looking up handler method for path /vehicle/628611860
-2015-02-13 10:06:21,484 DEBUG [qtp1894144426-21] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:251] Returning handler method [public api.VehicleDetailController$Vehicle api.VehicleDetailController.showVehicle(java.lang.String)]
+2015-02-13 10:06:21,484 DEBUG [qtp1894144426-21] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:251] Returning handler method [public com.example.jsontransform.detail.VehicleDetailController$Vehicle com.example.jsontransform.detail.VehicleDetailController.showVehicle(java.lang.String)]
 2015-02-13 10:06:21,485 DEBUG [qtp1894144426-21] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:925] Last-Modified value for [/vehicle/628611860] is: -1
 2015-02-13 10:06:21,531 DEBUG [qtp1894144426-21] o.s.web.client.RestTemplate [HttpAccessor.java:78] Created GET request for "http://www.cars.com/vehicledetail/detail/628611860.json"
 2015-02-13 10:06:21,535 DEBUG [qtp1894144426-21] o.s.web.client.RestTemplate [RestTemplate.java:679] Setting request Accept header to [application/json, application/*+json]
 2015-02-13 10:06:21,655 DEBUG [qtp1894144426-21] o.s.web.client.RestTemplate [RestTemplate.java:579] GET request for "http://www.cars.com/vehicledetail/detail/628611860.json" resulted in 200 (OK)
-2015-02-13 10:06:21,656 DEBUG [qtp1894144426-21] o.s.web.client.RestTemplate [HttpMessageConverterExtractor.java:92] Reading [class api.VehicleDetailController$Listing] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@4245de8]
-2015-02-13 10:06:21,681 DEBUG [qtp1894144426-21] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor [AbstractMessageConverterMethodProcessor.java:145] Written [api.VehicleDetailController$Vehicle@291a0da3] as "application/json;charset=UTF-8" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@76cf259a]
+2015-02-13 10:06:21,656 DEBUG [qtp1894144426-21] o.s.web.client.RestTemplate [HttpMessageConverterExtractor.java:92] Reading [class com.example.jsontransform.detail.VehicleDetailController$Listing] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@4245de8]
+2015-02-13 10:06:21,681 DEBUG [qtp1894144426-21] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor [AbstractMessageConverterMethodProcessor.java:145] Written [com.example.jsontransform.detail.VehicleDetailController$Vehicle@291a0da3] as "application/json;charset=UTF-8" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@76cf259a]
 2015-02-13 10:06:21,682 DEBUG [qtp1894144426-21] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:1012] Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
 2015-02-13 10:06:21,682 DEBUG [qtp1894144426-21] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java:991] Successfully completed request
 2015-02-13 11:24:46,981 DEBUG [main] o.s.w.c.s.StandardServletEnvironment [MutablePropertySources.java:111] Adding [servletConfigInitParams] PropertySource with lowest search precedence
@@ -1328,8 +1328,8 @@
 2015-02-13 11:24:49,752 DEBUG [main] o.s.w.c.s.StandardServletEnvironment [AbstractEnvironment.java:126] Initialized StandardServletEnvironment with PropertySources [servletConfigInitParams,servletContextInitParams,jndiProperties,systemProperties,systemEnvironment]
 2015-02-13 11:24:50,404 INFO [main] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:315] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
 2015-02-13 11:24:50,622 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:114] Looking for request mappings in application context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@15eb5ee5: startup date [Fri Feb 13 11:24:47 CST 2015]; root of context hierarchy
-2015-02-13 11:24:50,642 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/vehicle/{listingId}],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.lang.String api.VehicleDetailController.showVehicle(java.lang.String)
-2015-02-13 11:24:50,644 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2015-02-13 11:24:50,642 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/vehicle/{listingId}],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.lang.String com.example.jsontransform.detail.VehicleDetailController.showVehicle(java.lang.String)
+2015-02-13 11:24:50,644 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.com.example.jsontransform.common.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
 2015-02-13 11:24:50,644 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[text/html],custom=[]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest)
 2015-02-13 11:24:50,660 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping [AbstractDetectingUrlHandlerMapping.java:71] Looking for URL mappings in application context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@15eb5ee5: startup date [Fri Feb 13 11:24:47 CST 2015]; root of context hierarchy
 2015-02-13 11:24:50,661 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping [AbstractDetectingUrlHandlerMapping.java:86] Rejected bean name 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor': no URL paths identified
@@ -1470,17 +1470,17 @@
 2015-02-13 11:24:51,306 INFO [Thread-12] o.mockserver.mockserver.MockServer [MockServer.java:56] MockServer starting up on port: 8082
 2015-02-13 11:24:52,970 DEBUG [qtp1340057206-19] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:838] DispatcherServlet with name 'dispatcherServlet' processing GET request for [/vehicle/628611860]
 2015-02-13 11:24:52,974 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:246] Looking up handler method for path /vehicle/628611860
-2015-02-13 11:24:52,978 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:251] Returning handler method [public java.lang.String api.VehicleDetailController.showVehicle(java.lang.String)]
+2015-02-13 11:24:52,978 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:251] Returning handler method [public java.lang.String com.example.jsontransform.detail.VehicleDetailController.showVehicle(java.lang.String)]
 2015-02-13 11:24:52,979 DEBUG [qtp1340057206-19] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:925] Last-Modified value for [/vehicle/628611860] is: -1
-2015-02-13 11:24:53,001 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:134] Resolving exception from handler [public java.lang.String api.VehicleDetailController.showVehicle(java.lang.String)]: java.lang.RuntimeException: Unable to load JSON map from classPath : jsontranforms/listingDetail.json
-2015-02-13 11:24:53,002 DEBUG [qtp1340057206-19] o.s.w.s.m.a.ResponseStatusExceptionResolver [AbstractHandlerExceptionResolver.java:134] Resolving exception from handler [public java.lang.String api.VehicleDetailController.showVehicle(java.lang.String)]: java.lang.RuntimeException: Unable to load JSON map from classPath : jsontranforms/listingDetail.json
-2015-02-13 11:24:53,003 DEBUG [qtp1340057206-19] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:134] Resolving exception from handler [public java.lang.String api.VehicleDetailController.showVehicle(java.lang.String)]: java.lang.RuntimeException: Unable to load JSON map from classPath : jsontranforms/listingDetail.json
+2015-02-13 11:24:53,001 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:134] Resolving exception from handler [public java.lang.String com.example.jsontransform.detail.VehicleDetailController.showVehicle(java.lang.String)]: java.lang.RuntimeException: Unable to load JSON map from classPath : jsontranforms/listingDetail.json
+2015-02-13 11:24:53,002 DEBUG [qtp1340057206-19] o.s.w.s.m.a.ResponseStatusExceptionResolver [AbstractHandlerExceptionResolver.java:134] Resolving exception from handler [public java.lang.String com.example.jsontransform.detail.VehicleDetailController.showVehicle(java.lang.String)]: java.lang.RuntimeException: Unable to load JSON map from classPath : jsontranforms/listingDetail.json
+2015-02-13 11:24:53,003 DEBUG [qtp1340057206-19] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:134] Resolving exception from handler [public java.lang.String com.example.jsontransform.detail.VehicleDetailController.showVehicle(java.lang.String)]: java.lang.RuntimeException: Unable to load JSON map from classPath : jsontranforms/listingDetail.json
 2015-02-13 11:24:53,011 DEBUG [qtp1340057206-19] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java:984] Could not complete request
 java.lang.RuntimeException: Unable to load JSON map from classPath : jsontranforms/listingDetail.json
 	at com.bazaarvoice.jolt.JsonUtilImpl.classpathToList(JsonUtilImpl.java:190) ~[json-utils-0.0.12.jar:na]
 	at com.bazaarvoice.jolt.JsonUtils.classpathToList(JsonUtils.java:151) ~[json-utils-0.0.12.jar:na]
-	at util.Jolt.transform(Jolt.java:14) ~[main/:na]
-	at api.VehicleDetailController.showVehicle(VehicleDetailController.java:24) ~[main/:na]
+	at com.example.jsontransform.common.JsonTransformer.transform(Jolt.java:14) ~[main/:na]
+	at com.example.jsontransform.detail.VehicleDetailController.showVehicle(VehicleDetailController.java:24) ~[main/:na]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
@@ -1531,13 +1531,13 @@ java.lang.RuntimeException: Unable to load JSON map from classPath : jsontranfor
 	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82) [jetty-server-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:696) [jetty-io-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:53) [jetty-io-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-util-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-util-8.1.15.v20140411.jar:8.1.15.v20140411]
+	at org.eclipse.jetty.com.example.jsontransform.common.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-com.example.jsontransform.common-8.1.15.v20140411.jar:8.1.15.v20140411]
+	at org.eclipse.jetty.com.example.jsontransform.common.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-com.example.jsontransform.common-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_25]
 Caused by: java.lang.RuntimeException: Unable to load JSON list from InputStream.
 	at com.bazaarvoice.jolt.JsonUtilImpl.jsonToList(JsonUtilImpl.java:122) ~[json-utils-0.0.12.jar:na]
 	at com.bazaarvoice.jolt.JsonUtilImpl.classpathToList(JsonUtilImpl.java:187) ~[json-utils-0.0.12.jar:na]
-	... 56 common frames omitted
+	... 56 com.example.jsontransform.common frames omitted
 Caused by: com.fasterxml.jackson.databind.JsonMappingException: No content to map due to end-of-input
  at [Source: UNKNOWN; line: 1, column: 1]
 	at com.fasterxml.jackson.databind.JsonMappingException.from(JsonMappingException.java:164) ~[jackson-databind-2.3.4.jar:2.3.4]
@@ -1545,9 +1545,9 @@ Caused by: com.fasterxml.jackson.databind.JsonMappingException: No content to ma
 	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:2978) ~[jackson-databind-2.3.4.jar:2.3.4]
 	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2151) ~[jackson-databind-2.3.4.jar:2.3.4]
 	at com.bazaarvoice.jolt.JsonUtilImpl.jsonToList(JsonUtilImpl.java:119) ~[json-utils-0.0.12.jar:na]
-	... 57 common frames omitted
+	... 57 com.example.jsontransform.common frames omitted
 2015-02-13 11:24:53,020 WARN [qtp1340057206-19] o.e.jetty.servlet.ServletHandler [ServletHandler.java:538] 
-org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.RuntimeException: Unable to load JSON map from classPath : jsontranforms/listingDetail.json
+org.springframework.web.com.example.jsontransform.common.NestedServletException: Request processing failed; nested exception is java.lang.RuntimeException: Unable to load JSON map from classPath : jsontranforms/listingDetail.json
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:973) ~[spring-webmvc-4.0.8.RELEASE.jar:4.0.8.RELEASE]
 	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:852) ~[spring-webmvc-4.0.8.RELEASE.jar:4.0.8.RELEASE]
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:735) ~[javax.servlet-3.0.0.v201112011016.jar:na]
@@ -1586,14 +1586,14 @@ org.springframework.web.util.NestedServletException: Request processing failed; 
 	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82) [jetty-server-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:696) [jetty-io-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:53) [jetty-io-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-util-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-util-8.1.15.v20140411.jar:8.1.15.v20140411]
+	at org.eclipse.jetty.com.example.jsontransform.common.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-com.example.jsontransform.common-8.1.15.v20140411.jar:8.1.15.v20140411]
+	at org.eclipse.jetty.com.example.jsontransform.common.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-com.example.jsontransform.common-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_25]
 Caused by: java.lang.RuntimeException: Unable to load JSON map from classPath : jsontranforms/listingDetail.json
 	at com.bazaarvoice.jolt.JsonUtilImpl.classpathToList(JsonUtilImpl.java:190) ~[json-utils-0.0.12.jar:na]
 	at com.bazaarvoice.jolt.JsonUtils.classpathToList(JsonUtils.java:151) ~[json-utils-0.0.12.jar:na]
-	at util.Jolt.transform(Jolt.java:14) ~[main/:na]
-	at api.VehicleDetailController.showVehicle(VehicleDetailController.java:24) ~[main/:na]
+	at com.example.jsontransform.common.JsonTransformer.transform(Jolt.java:14) ~[main/:na]
+	at com.example.jsontransform.detail.VehicleDetailController.showVehicle(VehicleDetailController.java:24) ~[main/:na]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
@@ -1607,11 +1607,11 @@ Caused by: java.lang.RuntimeException: Unable to load JSON map from classPath : 
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:938) ~[spring-webmvc-4.0.8.RELEASE.jar:4.0.8.RELEASE]
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:870) ~[spring-webmvc-4.0.8.RELEASE.jar:4.0.8.RELEASE]
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:961) ~[spring-webmvc-4.0.8.RELEASE.jar:4.0.8.RELEASE]
-	... 40 common frames omitted
+	... 40 com.example.jsontransform.common frames omitted
 Caused by: java.lang.RuntimeException: Unable to load JSON list from InputStream.
 	at com.bazaarvoice.jolt.JsonUtilImpl.jsonToList(JsonUtilImpl.java:122) ~[json-utils-0.0.12.jar:na]
 	at com.bazaarvoice.jolt.JsonUtilImpl.classpathToList(JsonUtilImpl.java:187) ~[json-utils-0.0.12.jar:na]
-	... 56 common frames omitted
+	... 56 com.example.jsontransform.common frames omitted
 Caused by: com.fasterxml.jackson.databind.JsonMappingException: No content to map due to end-of-input
  at [Source: UNKNOWN; line: 1, column: 1]
 	at com.fasterxml.jackson.databind.JsonMappingException.from(JsonMappingException.java:164) ~[jackson-databind-2.3.4.jar:2.3.4]
@@ -1619,13 +1619,13 @@ Caused by: com.fasterxml.jackson.databind.JsonMappingException: No content to ma
 	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:2978) ~[jackson-databind-2.3.4.jar:2.3.4]
 	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2151) ~[jackson-databind-2.3.4.jar:2.3.4]
 	at com.bazaarvoice.jolt.JsonUtilImpl.jsonToList(JsonUtilImpl.java:119) ~[json-utils-0.0.12.jar:na]
-	... 57 common frames omitted
+	... 57 com.example.jsontransform.common frames omitted
 2015-02-13 11:24:53,037 WARN [qtp1340057206-19] o.e.jetty.servlet.ServletHandler [ServletHandler.java:563] /vehicle/628611860
 java.lang.RuntimeException: Unable to load JSON map from classPath : jsontranforms/listingDetail.json
 	at com.bazaarvoice.jolt.JsonUtilImpl.classpathToList(JsonUtilImpl.java:190) ~[json-utils-0.0.12.jar:na]
 	at com.bazaarvoice.jolt.JsonUtils.classpathToList(JsonUtils.java:151) ~[json-utils-0.0.12.jar:na]
-	at util.Jolt.transform(Jolt.java:14) ~[main/:na]
-	at api.VehicleDetailController.showVehicle(VehicleDetailController.java:24) ~[main/:na]
+	at com.example.jsontransform.common.JsonTransformer.transform(Jolt.java:14) ~[main/:na]
+	at com.example.jsontransform.detail.VehicleDetailController.showVehicle(VehicleDetailController.java:24) ~[main/:na]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
@@ -1676,13 +1676,13 @@ java.lang.RuntimeException: Unable to load JSON map from classPath : jsontranfor
 	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82) [jetty-server-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:696) [jetty-io-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:53) [jetty-io-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-util-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-util-8.1.15.v20140411.jar:8.1.15.v20140411]
+	at org.eclipse.jetty.com.example.jsontransform.common.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-com.example.jsontransform.common-8.1.15.v20140411.jar:8.1.15.v20140411]
+	at org.eclipse.jetty.com.example.jsontransform.common.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-com.example.jsontransform.common-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_25]
 Caused by: java.lang.RuntimeException: Unable to load JSON list from InputStream.
 	at com.bazaarvoice.jolt.JsonUtilImpl.jsonToList(JsonUtilImpl.java:122) ~[json-utils-0.0.12.jar:na]
 	at com.bazaarvoice.jolt.JsonUtilImpl.classpathToList(JsonUtilImpl.java:187) ~[json-utils-0.0.12.jar:na]
-	... 56 common frames omitted
+	... 56 com.example.jsontransform.common frames omitted
 Caused by: com.fasterxml.jackson.databind.JsonMappingException: No content to map due to end-of-input
  at [Source: UNKNOWN; line: 1, column: 1]
 	at com.fasterxml.jackson.databind.JsonMappingException.from(JsonMappingException.java:164) ~[jackson-databind-2.3.4.jar:2.3.4]
@@ -1690,10 +1690,10 @@ Caused by: com.fasterxml.jackson.databind.JsonMappingException: No content to ma
 	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:2978) ~[jackson-databind-2.3.4.jar:2.3.4]
 	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2151) ~[jackson-databind-2.3.4.jar:2.3.4]
 	at com.bazaarvoice.jolt.JsonUtilImpl.jsonToList(JsonUtilImpl.java:119) ~[json-utils-0.0.12.jar:na]
-	... 57 common frames omitted
+	... 57 com.example.jsontransform.common frames omitted
 2015-02-13 11:24:53,053 DEBUG [qtp1340057206-19] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:838] DispatcherServlet with name 'dispatcherServlet' processing GET request for [/error]
 2015-02-13 11:24:53,054 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:246] Looking up handler method for path /error
-2015-02-13 11:24:53,056 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:251] Returning handler method [public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+2015-02-13 11:24:53,056 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:251] Returning handler method [public org.springframework.http.ResponseEntity<java.com.example.jsontransform.common.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
 2015-02-13 11:24:53,056 DEBUG [qtp1340057206-19] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:925] Last-Modified value for [/error] is: -1
 2015-02-13 11:24:53,086 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.HttpEntityMethodProcessor [AbstractMessageConverterMethodProcessor.java:145] Written [{timestamp=Fri Feb 13 11:24:53 CST 2015, status=500, error=Internal Server Error, exception=java.lang.RuntimeException, message=Unable to load JSON map from classPath : jsontranforms/listingDetail.json, path=/vehicle/628611860}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@229888ac]
 2015-02-13 11:24:53,086 DEBUG [qtp1340057206-19] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:1012] Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
@@ -1732,8 +1732,8 @@ Caused by: com.fasterxml.jackson.databind.JsonMappingException: No content to ma
 2015-02-13 11:26:05,787 DEBUG [main] o.s.w.c.s.StandardServletEnvironment [AbstractEnvironment.java:126] Initialized StandardServletEnvironment with PropertySources [servletConfigInitParams,servletContextInitParams,jndiProperties,systemProperties,systemEnvironment]
 2015-02-13 11:26:06,256 INFO [main] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:315] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
 2015-02-13 11:26:06,397 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:114] Looking for request mappings in application context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@15eb5ee5: startup date [Fri Feb 13 11:26:03 CST 2015]; root of context hierarchy
-2015-02-13 11:26:06,409 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/vehicle/{listingId}],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.lang.String api.VehicleDetailController.showVehicle(java.lang.String)
-2015-02-13 11:26:06,411 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2015-02-13 11:26:06,409 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/vehicle/{listingId}],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.lang.String com.example.jsontransform.detail.VehicleDetailController.showVehicle(java.lang.String)
+2015-02-13 11:26:06,411 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.com.example.jsontransform.common.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
 2015-02-13 11:26:06,411 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[text/html],custom=[]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest)
 2015-02-13 11:26:06,427 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping [AbstractDetectingUrlHandlerMapping.java:71] Looking for URL mappings in application context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@15eb5ee5: startup date [Fri Feb 13 11:26:03 CST 2015]; root of context hierarchy
 2015-02-13 11:26:06,428 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping [AbstractDetectingUrlHandlerMapping.java:86] Rejected bean name 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor': no URL paths identified
@@ -1874,17 +1874,17 @@ Caused by: com.fasterxml.jackson.databind.JsonMappingException: No content to ma
 2015-02-13 11:26:07,017 INFO [Thread-12] o.mockserver.mockserver.MockServer [MockServer.java:56] MockServer starting up on port: 8082
 2015-02-13 11:26:08,385 DEBUG [qtp1340057206-19] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:838] DispatcherServlet with name 'dispatcherServlet' processing GET request for [/vehicle/628611860]
 2015-02-13 11:26:08,389 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:246] Looking up handler method for path /vehicle/628611860
-2015-02-13 11:26:08,393 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:251] Returning handler method [public java.lang.String api.VehicleDetailController.showVehicle(java.lang.String)]
+2015-02-13 11:26:08,393 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:251] Returning handler method [public java.lang.String com.example.jsontransform.detail.VehicleDetailController.showVehicle(java.lang.String)]
 2015-02-13 11:26:08,394 DEBUG [qtp1340057206-19] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:925] Last-Modified value for [/vehicle/628611860] is: -1
-2015-02-13 11:26:08,416 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:134] Resolving exception from handler [public java.lang.String api.VehicleDetailController.showVehicle(java.lang.String)]: java.lang.RuntimeException: Unable to load JSON map from classPath : jsontranforms/listingDetail.json
-2015-02-13 11:26:08,418 DEBUG [qtp1340057206-19] o.s.w.s.m.a.ResponseStatusExceptionResolver [AbstractHandlerExceptionResolver.java:134] Resolving exception from handler [public java.lang.String api.VehicleDetailController.showVehicle(java.lang.String)]: java.lang.RuntimeException: Unable to load JSON map from classPath : jsontranforms/listingDetail.json
-2015-02-13 11:26:08,421 DEBUG [qtp1340057206-19] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:134] Resolving exception from handler [public java.lang.String api.VehicleDetailController.showVehicle(java.lang.String)]: java.lang.RuntimeException: Unable to load JSON map from classPath : jsontranforms/listingDetail.json
+2015-02-13 11:26:08,416 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:134] Resolving exception from handler [public java.lang.String com.example.jsontransform.detail.VehicleDetailController.showVehicle(java.lang.String)]: java.lang.RuntimeException: Unable to load JSON map from classPath : jsontranforms/listingDetail.json
+2015-02-13 11:26:08,418 DEBUG [qtp1340057206-19] o.s.w.s.m.a.ResponseStatusExceptionResolver [AbstractHandlerExceptionResolver.java:134] Resolving exception from handler [public java.lang.String com.example.jsontransform.detail.VehicleDetailController.showVehicle(java.lang.String)]: java.lang.RuntimeException: Unable to load JSON map from classPath : jsontranforms/listingDetail.json
+2015-02-13 11:26:08,421 DEBUG [qtp1340057206-19] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:134] Resolving exception from handler [public java.lang.String com.example.jsontransform.detail.VehicleDetailController.showVehicle(java.lang.String)]: java.lang.RuntimeException: Unable to load JSON map from classPath : jsontranforms/listingDetail.json
 2015-02-13 11:26:08,427 DEBUG [qtp1340057206-19] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java:984] Could not complete request
 java.lang.RuntimeException: Unable to load JSON map from classPath : jsontranforms/listingDetail.json
 	at com.bazaarvoice.jolt.JsonUtilImpl.classpathToList(JsonUtilImpl.java:190) ~[json-utils-0.0.12.jar:na]
 	at com.bazaarvoice.jolt.JsonUtils.classpathToList(JsonUtils.java:151) ~[json-utils-0.0.12.jar:na]
-	at util.Jolt.transform(Jolt.java:14) ~[main/:na]
-	at api.VehicleDetailController.showVehicle(VehicleDetailController.java:24) ~[main/:na]
+	at com.example.jsontransform.common.JsonTransformer.transform(Jolt.java:14) ~[main/:na]
+	at com.example.jsontransform.detail.VehicleDetailController.showVehicle(VehicleDetailController.java:24) ~[main/:na]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
@@ -1935,13 +1935,13 @@ java.lang.RuntimeException: Unable to load JSON map from classPath : jsontranfor
 	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82) [jetty-server-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:696) [jetty-io-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:53) [jetty-io-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-util-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-util-8.1.15.v20140411.jar:8.1.15.v20140411]
+	at org.eclipse.jetty.com.example.jsontransform.common.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-com.example.jsontransform.common-8.1.15.v20140411.jar:8.1.15.v20140411]
+	at org.eclipse.jetty.com.example.jsontransform.common.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-com.example.jsontransform.common-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_25]
 Caused by: java.lang.RuntimeException: Unable to load JSON list from InputStream.
 	at com.bazaarvoice.jolt.JsonUtilImpl.jsonToList(JsonUtilImpl.java:122) ~[json-utils-0.0.12.jar:na]
 	at com.bazaarvoice.jolt.JsonUtilImpl.classpathToList(JsonUtilImpl.java:187) ~[json-utils-0.0.12.jar:na]
-	... 56 common frames omitted
+	... 56 com.example.jsontransform.common frames omitted
 Caused by: com.fasterxml.jackson.databind.JsonMappingException: No content to map due to end-of-input
  at [Source: UNKNOWN; line: 1, column: 1]
 	at com.fasterxml.jackson.databind.JsonMappingException.from(JsonMappingException.java:164) ~[jackson-databind-2.3.4.jar:2.3.4]
@@ -1949,9 +1949,9 @@ Caused by: com.fasterxml.jackson.databind.JsonMappingException: No content to ma
 	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:2978) ~[jackson-databind-2.3.4.jar:2.3.4]
 	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2151) ~[jackson-databind-2.3.4.jar:2.3.4]
 	at com.bazaarvoice.jolt.JsonUtilImpl.jsonToList(JsonUtilImpl.java:119) ~[json-utils-0.0.12.jar:na]
-	... 57 common frames omitted
+	... 57 com.example.jsontransform.common frames omitted
 2015-02-13 11:26:08,433 WARN [qtp1340057206-19] o.e.jetty.servlet.ServletHandler [ServletHandler.java:538] 
-org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.RuntimeException: Unable to load JSON map from classPath : jsontranforms/listingDetail.json
+org.springframework.web.com.example.jsontransform.common.NestedServletException: Request processing failed; nested exception is java.lang.RuntimeException: Unable to load JSON map from classPath : jsontranforms/listingDetail.json
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:973) ~[spring-webmvc-4.0.8.RELEASE.jar:4.0.8.RELEASE]
 	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:852) ~[spring-webmvc-4.0.8.RELEASE.jar:4.0.8.RELEASE]
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:735) ~[javax.servlet-3.0.0.v201112011016.jar:na]
@@ -1990,14 +1990,14 @@ org.springframework.web.util.NestedServletException: Request processing failed; 
 	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82) [jetty-server-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:696) [jetty-io-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:53) [jetty-io-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-util-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-util-8.1.15.v20140411.jar:8.1.15.v20140411]
+	at org.eclipse.jetty.com.example.jsontransform.common.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-com.example.jsontransform.common-8.1.15.v20140411.jar:8.1.15.v20140411]
+	at org.eclipse.jetty.com.example.jsontransform.common.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-com.example.jsontransform.common-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_25]
 Caused by: java.lang.RuntimeException: Unable to load JSON map from classPath : jsontranforms/listingDetail.json
 	at com.bazaarvoice.jolt.JsonUtilImpl.classpathToList(JsonUtilImpl.java:190) ~[json-utils-0.0.12.jar:na]
 	at com.bazaarvoice.jolt.JsonUtils.classpathToList(JsonUtils.java:151) ~[json-utils-0.0.12.jar:na]
-	at util.Jolt.transform(Jolt.java:14) ~[main/:na]
-	at api.VehicleDetailController.showVehicle(VehicleDetailController.java:24) ~[main/:na]
+	at com.example.jsontransform.common.JsonTransformer.transform(Jolt.java:14) ~[main/:na]
+	at com.example.jsontransform.detail.VehicleDetailController.showVehicle(VehicleDetailController.java:24) ~[main/:na]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
@@ -2011,11 +2011,11 @@ Caused by: java.lang.RuntimeException: Unable to load JSON map from classPath : 
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:938) ~[spring-webmvc-4.0.8.RELEASE.jar:4.0.8.RELEASE]
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:870) ~[spring-webmvc-4.0.8.RELEASE.jar:4.0.8.RELEASE]
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:961) ~[spring-webmvc-4.0.8.RELEASE.jar:4.0.8.RELEASE]
-	... 40 common frames omitted
+	... 40 com.example.jsontransform.common frames omitted
 Caused by: java.lang.RuntimeException: Unable to load JSON list from InputStream.
 	at com.bazaarvoice.jolt.JsonUtilImpl.jsonToList(JsonUtilImpl.java:122) ~[json-utils-0.0.12.jar:na]
 	at com.bazaarvoice.jolt.JsonUtilImpl.classpathToList(JsonUtilImpl.java:187) ~[json-utils-0.0.12.jar:na]
-	... 56 common frames omitted
+	... 56 com.example.jsontransform.common frames omitted
 Caused by: com.fasterxml.jackson.databind.JsonMappingException: No content to map due to end-of-input
  at [Source: UNKNOWN; line: 1, column: 1]
 	at com.fasterxml.jackson.databind.JsonMappingException.from(JsonMappingException.java:164) ~[jackson-databind-2.3.4.jar:2.3.4]
@@ -2023,13 +2023,13 @@ Caused by: com.fasterxml.jackson.databind.JsonMappingException: No content to ma
 	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:2978) ~[jackson-databind-2.3.4.jar:2.3.4]
 	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2151) ~[jackson-databind-2.3.4.jar:2.3.4]
 	at com.bazaarvoice.jolt.JsonUtilImpl.jsonToList(JsonUtilImpl.java:119) ~[json-utils-0.0.12.jar:na]
-	... 57 common frames omitted
+	... 57 com.example.jsontransform.common frames omitted
 2015-02-13 11:26:08,451 WARN [qtp1340057206-19] o.e.jetty.servlet.ServletHandler [ServletHandler.java:563] /vehicle/628611860
 java.lang.RuntimeException: Unable to load JSON map from classPath : jsontranforms/listingDetail.json
 	at com.bazaarvoice.jolt.JsonUtilImpl.classpathToList(JsonUtilImpl.java:190) ~[json-utils-0.0.12.jar:na]
 	at com.bazaarvoice.jolt.JsonUtils.classpathToList(JsonUtils.java:151) ~[json-utils-0.0.12.jar:na]
-	at util.Jolt.transform(Jolt.java:14) ~[main/:na]
-	at api.VehicleDetailController.showVehicle(VehicleDetailController.java:24) ~[main/:na]
+	at com.example.jsontransform.common.JsonTransformer.transform(Jolt.java:14) ~[main/:na]
+	at com.example.jsontransform.detail.VehicleDetailController.showVehicle(VehicleDetailController.java:24) ~[main/:na]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
@@ -2080,13 +2080,13 @@ java.lang.RuntimeException: Unable to load JSON map from classPath : jsontranfor
 	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82) [jetty-server-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:696) [jetty-io-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:53) [jetty-io-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-util-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-util-8.1.15.v20140411.jar:8.1.15.v20140411]
+	at org.eclipse.jetty.com.example.jsontransform.common.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-com.example.jsontransform.common-8.1.15.v20140411.jar:8.1.15.v20140411]
+	at org.eclipse.jetty.com.example.jsontransform.common.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-com.example.jsontransform.common-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_25]
 Caused by: java.lang.RuntimeException: Unable to load JSON list from InputStream.
 	at com.bazaarvoice.jolt.JsonUtilImpl.jsonToList(JsonUtilImpl.java:122) ~[json-utils-0.0.12.jar:na]
 	at com.bazaarvoice.jolt.JsonUtilImpl.classpathToList(JsonUtilImpl.java:187) ~[json-utils-0.0.12.jar:na]
-	... 56 common frames omitted
+	... 56 com.example.jsontransform.common frames omitted
 Caused by: com.fasterxml.jackson.databind.JsonMappingException: No content to map due to end-of-input
  at [Source: UNKNOWN; line: 1, column: 1]
 	at com.fasterxml.jackson.databind.JsonMappingException.from(JsonMappingException.java:164) ~[jackson-databind-2.3.4.jar:2.3.4]
@@ -2094,10 +2094,10 @@ Caused by: com.fasterxml.jackson.databind.JsonMappingException: No content to ma
 	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:2978) ~[jackson-databind-2.3.4.jar:2.3.4]
 	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2151) ~[jackson-databind-2.3.4.jar:2.3.4]
 	at com.bazaarvoice.jolt.JsonUtilImpl.jsonToList(JsonUtilImpl.java:119) ~[json-utils-0.0.12.jar:na]
-	... 57 common frames omitted
+	... 57 com.example.jsontransform.common frames omitted
 2015-02-13 11:26:08,467 DEBUG [qtp1340057206-19] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:838] DispatcherServlet with name 'dispatcherServlet' processing GET request for [/error]
 2015-02-13 11:26:08,468 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:246] Looking up handler method for path /error
-2015-02-13 11:26:08,468 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:251] Returning handler method [public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+2015-02-13 11:26:08,468 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:251] Returning handler method [public org.springframework.http.ResponseEntity<java.com.example.jsontransform.common.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
 2015-02-13 11:26:08,469 DEBUG [qtp1340057206-19] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:925] Last-Modified value for [/error] is: -1
 2015-02-13 11:26:08,490 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.HttpEntityMethodProcessor [AbstractMessageConverterMethodProcessor.java:145] Written [{timestamp=Fri Feb 13 11:26:08 CST 2015, status=500, error=Internal Server Error, exception=java.lang.RuntimeException, message=Unable to load JSON map from classPath : jsontranforms/listingDetail.json, path=/vehicle/628611860}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@49f6f3cb]
 2015-02-13 11:26:08,490 DEBUG [qtp1340057206-19] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:1012] Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
@@ -2136,8 +2136,8 @@ Caused by: com.fasterxml.jackson.databind.JsonMappingException: No content to ma
 2015-02-13 11:28:53,299 DEBUG [main] o.s.w.c.s.StandardServletEnvironment [AbstractEnvironment.java:126] Initialized StandardServletEnvironment with PropertySources [servletConfigInitParams,servletContextInitParams,jndiProperties,systemProperties,systemEnvironment]
 2015-02-13 11:28:53,788 INFO [main] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:315] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
 2015-02-13 11:28:53,927 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:114] Looking for request mappings in application context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@15eb5ee5: startup date [Fri Feb 13 11:28:51 CST 2015]; root of context hierarchy
-2015-02-13 11:28:53,939 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/vehicle/{listingId}],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.lang.String api.VehicleDetailController.showVehicle(java.lang.String)
-2015-02-13 11:28:53,941 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2015-02-13 11:28:53,939 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/vehicle/{listingId}],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.lang.String com.example.jsontransform.detail.VehicleDetailController.showVehicle(java.lang.String)
+2015-02-13 11:28:53,941 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.com.example.jsontransform.common.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
 2015-02-13 11:28:53,942 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[text/html],custom=[]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest)
 2015-02-13 11:28:53,960 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping [AbstractDetectingUrlHandlerMapping.java:71] Looking for URL mappings in application context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@15eb5ee5: startup date [Fri Feb 13 11:28:51 CST 2015]; root of context hierarchy
 2015-02-13 11:28:53,960 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping [AbstractDetectingUrlHandlerMapping.java:86] Rejected bean name 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor': no URL paths identified
@@ -2278,17 +2278,17 @@ Caused by: com.fasterxml.jackson.databind.JsonMappingException: No content to ma
 2015-02-13 11:28:54,588 INFO [Thread-12] o.mockserver.mockserver.MockServer [MockServer.java:56] MockServer starting up on port: 8082
 2015-02-13 11:28:56,026 DEBUG [qtp1340057206-19] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:838] DispatcherServlet with name 'dispatcherServlet' processing GET request for [/vehicle/628611860]
 2015-02-13 11:28:56,031 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:246] Looking up handler method for path /vehicle/628611860
-2015-02-13 11:28:56,036 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:251] Returning handler method [public java.lang.String api.VehicleDetailController.showVehicle(java.lang.String)]
+2015-02-13 11:28:56,036 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:251] Returning handler method [public java.lang.String com.example.jsontransform.detail.VehicleDetailController.showVehicle(java.lang.String)]
 2015-02-13 11:28:56,037 DEBUG [qtp1340057206-19] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:925] Last-Modified value for [/vehicle/628611860] is: -1
-2015-02-13 11:28:56,061 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:134] Resolving exception from handler [public java.lang.String api.VehicleDetailController.showVehicle(java.lang.String)]: java.lang.RuntimeException: Unable to load JSON map from classPath : /jsontranforms/listingDetail.json
-2015-02-13 11:28:56,063 DEBUG [qtp1340057206-19] o.s.w.s.m.a.ResponseStatusExceptionResolver [AbstractHandlerExceptionResolver.java:134] Resolving exception from handler [public java.lang.String api.VehicleDetailController.showVehicle(java.lang.String)]: java.lang.RuntimeException: Unable to load JSON map from classPath : /jsontranforms/listingDetail.json
-2015-02-13 11:28:56,064 DEBUG [qtp1340057206-19] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:134] Resolving exception from handler [public java.lang.String api.VehicleDetailController.showVehicle(java.lang.String)]: java.lang.RuntimeException: Unable to load JSON map from classPath : /jsontranforms/listingDetail.json
+2015-02-13 11:28:56,061 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:134] Resolving exception from handler [public java.lang.String com.example.jsontransform.detail.VehicleDetailController.showVehicle(java.lang.String)]: java.lang.RuntimeException: Unable to load JSON map from classPath : /jsontranforms/listingDetail.json
+2015-02-13 11:28:56,063 DEBUG [qtp1340057206-19] o.s.w.s.m.a.ResponseStatusExceptionResolver [AbstractHandlerExceptionResolver.java:134] Resolving exception from handler [public java.lang.String com.example.jsontransform.detail.VehicleDetailController.showVehicle(java.lang.String)]: java.lang.RuntimeException: Unable to load JSON map from classPath : /jsontranforms/listingDetail.json
+2015-02-13 11:28:56,064 DEBUG [qtp1340057206-19] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:134] Resolving exception from handler [public java.lang.String com.example.jsontransform.detail.VehicleDetailController.showVehicle(java.lang.String)]: java.lang.RuntimeException: Unable to load JSON map from classPath : /jsontranforms/listingDetail.json
 2015-02-13 11:28:56,076 DEBUG [qtp1340057206-19] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java:984] Could not complete request
 java.lang.RuntimeException: Unable to load JSON map from classPath : /jsontranforms/listingDetail.json
 	at com.bazaarvoice.jolt.JsonUtilImpl.classpathToList(JsonUtilImpl.java:190) ~[json-utils-0.0.12.jar:na]
 	at com.bazaarvoice.jolt.JsonUtils.classpathToList(JsonUtils.java:151) ~[json-utils-0.0.12.jar:na]
-	at util.Jolt.transform(Jolt.java:14) ~[main/:na]
-	at api.VehicleDetailController.showVehicle(VehicleDetailController.java:24) ~[main/:na]
+	at com.example.jsontransform.common.JsonTransformer.transform(Jolt.java:14) ~[main/:na]
+	at com.example.jsontransform.detail.VehicleDetailController.showVehicle(VehicleDetailController.java:24) ~[main/:na]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
@@ -2339,13 +2339,13 @@ java.lang.RuntimeException: Unable to load JSON map from classPath : /jsontranfo
 	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82) [jetty-server-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:696) [jetty-io-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:53) [jetty-io-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-util-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-util-8.1.15.v20140411.jar:8.1.15.v20140411]
+	at org.eclipse.jetty.com.example.jsontransform.common.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-com.example.jsontransform.common-8.1.15.v20140411.jar:8.1.15.v20140411]
+	at org.eclipse.jetty.com.example.jsontransform.common.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-com.example.jsontransform.common-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_25]
 Caused by: java.lang.RuntimeException: Unable to load JSON list from InputStream.
 	at com.bazaarvoice.jolt.JsonUtilImpl.jsonToList(JsonUtilImpl.java:122) ~[json-utils-0.0.12.jar:na]
 	at com.bazaarvoice.jolt.JsonUtilImpl.classpathToList(JsonUtilImpl.java:187) ~[json-utils-0.0.12.jar:na]
-	... 56 common frames omitted
+	... 56 com.example.jsontransform.common frames omitted
 Caused by: com.fasterxml.jackson.databind.JsonMappingException: No content to map due to end-of-input
  at [Source: UNKNOWN; line: 1, column: 1]
 	at com.fasterxml.jackson.databind.JsonMappingException.from(JsonMappingException.java:164) ~[jackson-databind-2.3.4.jar:2.3.4]
@@ -2353,9 +2353,9 @@ Caused by: com.fasterxml.jackson.databind.JsonMappingException: No content to ma
 	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:2978) ~[jackson-databind-2.3.4.jar:2.3.4]
 	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2151) ~[jackson-databind-2.3.4.jar:2.3.4]
 	at com.bazaarvoice.jolt.JsonUtilImpl.jsonToList(JsonUtilImpl.java:119) ~[json-utils-0.0.12.jar:na]
-	... 57 common frames omitted
+	... 57 com.example.jsontransform.common frames omitted
 2015-02-13 11:28:56,083 WARN [qtp1340057206-19] o.e.jetty.servlet.ServletHandler [ServletHandler.java:538] 
-org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.RuntimeException: Unable to load JSON map from classPath : /jsontranforms/listingDetail.json
+org.springframework.web.com.example.jsontransform.common.NestedServletException: Request processing failed; nested exception is java.lang.RuntimeException: Unable to load JSON map from classPath : /jsontranforms/listingDetail.json
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:973) ~[spring-webmvc-4.0.8.RELEASE.jar:4.0.8.RELEASE]
 	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:852) ~[spring-webmvc-4.0.8.RELEASE.jar:4.0.8.RELEASE]
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:735) ~[javax.servlet-3.0.0.v201112011016.jar:na]
@@ -2394,14 +2394,14 @@ org.springframework.web.util.NestedServletException: Request processing failed; 
 	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82) [jetty-server-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:696) [jetty-io-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:53) [jetty-io-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-util-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-util-8.1.15.v20140411.jar:8.1.15.v20140411]
+	at org.eclipse.jetty.com.example.jsontransform.common.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-com.example.jsontransform.common-8.1.15.v20140411.jar:8.1.15.v20140411]
+	at org.eclipse.jetty.com.example.jsontransform.common.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-com.example.jsontransform.common-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_25]
 Caused by: java.lang.RuntimeException: Unable to load JSON map from classPath : /jsontranforms/listingDetail.json
 	at com.bazaarvoice.jolt.JsonUtilImpl.classpathToList(JsonUtilImpl.java:190) ~[json-utils-0.0.12.jar:na]
 	at com.bazaarvoice.jolt.JsonUtils.classpathToList(JsonUtils.java:151) ~[json-utils-0.0.12.jar:na]
-	at util.Jolt.transform(Jolt.java:14) ~[main/:na]
-	at api.VehicleDetailController.showVehicle(VehicleDetailController.java:24) ~[main/:na]
+	at com.example.jsontransform.common.JsonTransformer.transform(Jolt.java:14) ~[main/:na]
+	at com.example.jsontransform.detail.VehicleDetailController.showVehicle(VehicleDetailController.java:24) ~[main/:na]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
@@ -2415,11 +2415,11 @@ Caused by: java.lang.RuntimeException: Unable to load JSON map from classPath : 
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:938) ~[spring-webmvc-4.0.8.RELEASE.jar:4.0.8.RELEASE]
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:870) ~[spring-webmvc-4.0.8.RELEASE.jar:4.0.8.RELEASE]
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:961) ~[spring-webmvc-4.0.8.RELEASE.jar:4.0.8.RELEASE]
-	... 40 common frames omitted
+	... 40 com.example.jsontransform.common frames omitted
 Caused by: java.lang.RuntimeException: Unable to load JSON list from InputStream.
 	at com.bazaarvoice.jolt.JsonUtilImpl.jsonToList(JsonUtilImpl.java:122) ~[json-utils-0.0.12.jar:na]
 	at com.bazaarvoice.jolt.JsonUtilImpl.classpathToList(JsonUtilImpl.java:187) ~[json-utils-0.0.12.jar:na]
-	... 56 common frames omitted
+	... 56 com.example.jsontransform.common frames omitted
 Caused by: com.fasterxml.jackson.databind.JsonMappingException: No content to map due to end-of-input
  at [Source: UNKNOWN; line: 1, column: 1]
 	at com.fasterxml.jackson.databind.JsonMappingException.from(JsonMappingException.java:164) ~[jackson-databind-2.3.4.jar:2.3.4]
@@ -2427,13 +2427,13 @@ Caused by: com.fasterxml.jackson.databind.JsonMappingException: No content to ma
 	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:2978) ~[jackson-databind-2.3.4.jar:2.3.4]
 	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2151) ~[jackson-databind-2.3.4.jar:2.3.4]
 	at com.bazaarvoice.jolt.JsonUtilImpl.jsonToList(JsonUtilImpl.java:119) ~[json-utils-0.0.12.jar:na]
-	... 57 common frames omitted
+	... 57 com.example.jsontransform.common frames omitted
 2015-02-13 11:28:56,102 WARN [qtp1340057206-19] o.e.jetty.servlet.ServletHandler [ServletHandler.java:563] /vehicle/628611860
 java.lang.RuntimeException: Unable to load JSON map from classPath : /jsontranforms/listingDetail.json
 	at com.bazaarvoice.jolt.JsonUtilImpl.classpathToList(JsonUtilImpl.java:190) ~[json-utils-0.0.12.jar:na]
 	at com.bazaarvoice.jolt.JsonUtils.classpathToList(JsonUtils.java:151) ~[json-utils-0.0.12.jar:na]
-	at util.Jolt.transform(Jolt.java:14) ~[main/:na]
-	at api.VehicleDetailController.showVehicle(VehicleDetailController.java:24) ~[main/:na]
+	at com.example.jsontransform.common.JsonTransformer.transform(Jolt.java:14) ~[main/:na]
+	at com.example.jsontransform.detail.VehicleDetailController.showVehicle(VehicleDetailController.java:24) ~[main/:na]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
@@ -2484,13 +2484,13 @@ java.lang.RuntimeException: Unable to load JSON map from classPath : /jsontranfo
 	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82) [jetty-server-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:696) [jetty-io-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:53) [jetty-io-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-util-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-util-8.1.15.v20140411.jar:8.1.15.v20140411]
+	at org.eclipse.jetty.com.example.jsontransform.common.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-com.example.jsontransform.common-8.1.15.v20140411.jar:8.1.15.v20140411]
+	at org.eclipse.jetty.com.example.jsontransform.common.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-com.example.jsontransform.common-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_25]
 Caused by: java.lang.RuntimeException: Unable to load JSON list from InputStream.
 	at com.bazaarvoice.jolt.JsonUtilImpl.jsonToList(JsonUtilImpl.java:122) ~[json-utils-0.0.12.jar:na]
 	at com.bazaarvoice.jolt.JsonUtilImpl.classpathToList(JsonUtilImpl.java:187) ~[json-utils-0.0.12.jar:na]
-	... 56 common frames omitted
+	... 56 com.example.jsontransform.common frames omitted
 Caused by: com.fasterxml.jackson.databind.JsonMappingException: No content to map due to end-of-input
  at [Source: UNKNOWN; line: 1, column: 1]
 	at com.fasterxml.jackson.databind.JsonMappingException.from(JsonMappingException.java:164) ~[jackson-databind-2.3.4.jar:2.3.4]
@@ -2498,10 +2498,10 @@ Caused by: com.fasterxml.jackson.databind.JsonMappingException: No content to ma
 	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:2978) ~[jackson-databind-2.3.4.jar:2.3.4]
 	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2151) ~[jackson-databind-2.3.4.jar:2.3.4]
 	at com.bazaarvoice.jolt.JsonUtilImpl.jsonToList(JsonUtilImpl.java:119) ~[json-utils-0.0.12.jar:na]
-	... 57 common frames omitted
+	... 57 com.example.jsontransform.common frames omitted
 2015-02-13 11:28:56,118 DEBUG [qtp1340057206-19] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:838] DispatcherServlet with name 'dispatcherServlet' processing GET request for [/error]
 2015-02-13 11:28:56,120 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:246] Looking up handler method for path /error
-2015-02-13 11:28:56,121 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:251] Returning handler method [public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+2015-02-13 11:28:56,121 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:251] Returning handler method [public org.springframework.http.ResponseEntity<java.com.example.jsontransform.common.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
 2015-02-13 11:28:56,121 DEBUG [qtp1340057206-19] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:925] Last-Modified value for [/error] is: -1
 2015-02-13 11:28:56,148 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.HttpEntityMethodProcessor [AbstractMessageConverterMethodProcessor.java:145] Written [{timestamp=Fri Feb 13 11:28:56 CST 2015, status=500, error=Internal Server Error, exception=java.lang.RuntimeException, message=Unable to load JSON map from classPath : /jsontranforms/listingDetail.json, path=/vehicle/628611860}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@67766a31]
 2015-02-13 11:28:56,149 DEBUG [qtp1340057206-19] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:1012] Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
@@ -2540,8 +2540,8 @@ Caused by: com.fasterxml.jackson.databind.JsonMappingException: No content to ma
 2015-02-13 11:29:16,798 DEBUG [main] o.s.w.c.s.StandardServletEnvironment [AbstractEnvironment.java:126] Initialized StandardServletEnvironment with PropertySources [servletConfigInitParams,servletContextInitParams,jndiProperties,systemProperties,systemEnvironment]
 2015-02-13 11:29:17,238 INFO [main] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:315] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
 2015-02-13 11:29:17,390 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:114] Looking for request mappings in application context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@15eb5ee5: startup date [Fri Feb 13 11:29:14 CST 2015]; root of context hierarchy
-2015-02-13 11:29:17,401 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/vehicle/{listingId}],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.lang.String api.VehicleDetailController.showVehicle(java.lang.String)
-2015-02-13 11:29:17,402 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2015-02-13 11:29:17,401 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/vehicle/{listingId}],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.lang.String com.example.jsontransform.detail.VehicleDetailController.showVehicle(java.lang.String)
+2015-02-13 11:29:17,402 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.com.example.jsontransform.common.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
 2015-02-13 11:29:17,403 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[text/html],custom=[]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest)
 2015-02-13 11:29:17,419 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping [AbstractDetectingUrlHandlerMapping.java:71] Looking for URL mappings in application context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@15eb5ee5: startup date [Fri Feb 13 11:29:14 CST 2015]; root of context hierarchy
 2015-02-13 11:29:17,419 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping [AbstractDetectingUrlHandlerMapping.java:86] Rejected bean name 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor': no URL paths identified
@@ -2682,17 +2682,17 @@ Caused by: com.fasterxml.jackson.databind.JsonMappingException: No content to ma
 2015-02-13 11:29:18,005 INFO [Thread-12] o.mockserver.mockserver.MockServer [MockServer.java:56] MockServer starting up on port: 8082
 2015-02-13 11:29:19,345 DEBUG [qtp1340057206-19] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:838] DispatcherServlet with name 'dispatcherServlet' processing GET request for [/vehicle/628611860]
 2015-02-13 11:29:19,350 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:246] Looking up handler method for path /vehicle/628611860
-2015-02-13 11:29:19,354 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:251] Returning handler method [public java.lang.String api.VehicleDetailController.showVehicle(java.lang.String)]
+2015-02-13 11:29:19,354 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:251] Returning handler method [public java.lang.String com.example.jsontransform.detail.VehicleDetailController.showVehicle(java.lang.String)]
 2015-02-13 11:29:19,355 DEBUG [qtp1340057206-19] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:925] Last-Modified value for [/vehicle/628611860] is: -1
-2015-02-13 11:29:19,381 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:134] Resolving exception from handler [public java.lang.String api.VehicleDetailController.showVehicle(java.lang.String)]: java.lang.RuntimeException: Unable to load JSON map from classPath : resources/jsontranforms/listingDetail.json
-2015-02-13 11:29:19,382 DEBUG [qtp1340057206-19] o.s.w.s.m.a.ResponseStatusExceptionResolver [AbstractHandlerExceptionResolver.java:134] Resolving exception from handler [public java.lang.String api.VehicleDetailController.showVehicle(java.lang.String)]: java.lang.RuntimeException: Unable to load JSON map from classPath : resources/jsontranforms/listingDetail.json
-2015-02-13 11:29:19,383 DEBUG [qtp1340057206-19] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:134] Resolving exception from handler [public java.lang.String api.VehicleDetailController.showVehicle(java.lang.String)]: java.lang.RuntimeException: Unable to load JSON map from classPath : resources/jsontranforms/listingDetail.json
+2015-02-13 11:29:19,381 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:134] Resolving exception from handler [public java.lang.String com.example.jsontransform.detail.VehicleDetailController.showVehicle(java.lang.String)]: java.lang.RuntimeException: Unable to load JSON map from classPath : resources/jsontranforms/listingDetail.json
+2015-02-13 11:29:19,382 DEBUG [qtp1340057206-19] o.s.w.s.m.a.ResponseStatusExceptionResolver [AbstractHandlerExceptionResolver.java:134] Resolving exception from handler [public java.lang.String com.example.jsontransform.detail.VehicleDetailController.showVehicle(java.lang.String)]: java.lang.RuntimeException: Unable to load JSON map from classPath : resources/jsontranforms/listingDetail.json
+2015-02-13 11:29:19,383 DEBUG [qtp1340057206-19] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:134] Resolving exception from handler [public java.lang.String com.example.jsontransform.detail.VehicleDetailController.showVehicle(java.lang.String)]: java.lang.RuntimeException: Unable to load JSON map from classPath : resources/jsontranforms/listingDetail.json
 2015-02-13 11:29:19,390 DEBUG [qtp1340057206-19] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java:984] Could not complete request
 java.lang.RuntimeException: Unable to load JSON map from classPath : resources/jsontranforms/listingDetail.json
 	at com.bazaarvoice.jolt.JsonUtilImpl.classpathToList(JsonUtilImpl.java:190) ~[json-utils-0.0.12.jar:na]
 	at com.bazaarvoice.jolt.JsonUtils.classpathToList(JsonUtils.java:151) ~[json-utils-0.0.12.jar:na]
-	at util.Jolt.transform(Jolt.java:14) ~[main/:na]
-	at api.VehicleDetailController.showVehicle(VehicleDetailController.java:24) ~[main/:na]
+	at com.example.jsontransform.common.JsonTransformer.transform(Jolt.java:14) ~[main/:na]
+	at com.example.jsontransform.detail.VehicleDetailController.showVehicle(VehicleDetailController.java:24) ~[main/:na]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
@@ -2743,13 +2743,13 @@ java.lang.RuntimeException: Unable to load JSON map from classPath : resources/j
 	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82) [jetty-server-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:696) [jetty-io-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:53) [jetty-io-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-util-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-util-8.1.15.v20140411.jar:8.1.15.v20140411]
+	at org.eclipse.jetty.com.example.jsontransform.common.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-com.example.jsontransform.common-8.1.15.v20140411.jar:8.1.15.v20140411]
+	at org.eclipse.jetty.com.example.jsontransform.common.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-com.example.jsontransform.common-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_25]
 Caused by: java.lang.RuntimeException: Unable to load JSON list from InputStream.
 	at com.bazaarvoice.jolt.JsonUtilImpl.jsonToList(JsonUtilImpl.java:122) ~[json-utils-0.0.12.jar:na]
 	at com.bazaarvoice.jolt.JsonUtilImpl.classpathToList(JsonUtilImpl.java:187) ~[json-utils-0.0.12.jar:na]
-	... 56 common frames omitted
+	... 56 com.example.jsontransform.common frames omitted
 Caused by: com.fasterxml.jackson.databind.JsonMappingException: No content to map due to end-of-input
  at [Source: UNKNOWN; line: 1, column: 1]
 	at com.fasterxml.jackson.databind.JsonMappingException.from(JsonMappingException.java:164) ~[jackson-databind-2.3.4.jar:2.3.4]
@@ -2757,9 +2757,9 @@ Caused by: com.fasterxml.jackson.databind.JsonMappingException: No content to ma
 	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:2978) ~[jackson-databind-2.3.4.jar:2.3.4]
 	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2151) ~[jackson-databind-2.3.4.jar:2.3.4]
 	at com.bazaarvoice.jolt.JsonUtilImpl.jsonToList(JsonUtilImpl.java:119) ~[json-utils-0.0.12.jar:na]
-	... 57 common frames omitted
+	... 57 com.example.jsontransform.common frames omitted
 2015-02-13 11:29:19,396 WARN [qtp1340057206-19] o.e.jetty.servlet.ServletHandler [ServletHandler.java:538] 
-org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.RuntimeException: Unable to load JSON map from classPath : resources/jsontranforms/listingDetail.json
+org.springframework.web.com.example.jsontransform.common.NestedServletException: Request processing failed; nested exception is java.lang.RuntimeException: Unable to load JSON map from classPath : resources/jsontranforms/listingDetail.json
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:973) ~[spring-webmvc-4.0.8.RELEASE.jar:4.0.8.RELEASE]
 	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:852) ~[spring-webmvc-4.0.8.RELEASE.jar:4.0.8.RELEASE]
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:735) ~[javax.servlet-3.0.0.v201112011016.jar:na]
@@ -2798,14 +2798,14 @@ org.springframework.web.util.NestedServletException: Request processing failed; 
 	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82) [jetty-server-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:696) [jetty-io-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:53) [jetty-io-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-util-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-util-8.1.15.v20140411.jar:8.1.15.v20140411]
+	at org.eclipse.jetty.com.example.jsontransform.common.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-com.example.jsontransform.common-8.1.15.v20140411.jar:8.1.15.v20140411]
+	at org.eclipse.jetty.com.example.jsontransform.common.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-com.example.jsontransform.common-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_25]
 Caused by: java.lang.RuntimeException: Unable to load JSON map from classPath : resources/jsontranforms/listingDetail.json
 	at com.bazaarvoice.jolt.JsonUtilImpl.classpathToList(JsonUtilImpl.java:190) ~[json-utils-0.0.12.jar:na]
 	at com.bazaarvoice.jolt.JsonUtils.classpathToList(JsonUtils.java:151) ~[json-utils-0.0.12.jar:na]
-	at util.Jolt.transform(Jolt.java:14) ~[main/:na]
-	at api.VehicleDetailController.showVehicle(VehicleDetailController.java:24) ~[main/:na]
+	at com.example.jsontransform.common.JsonTransformer.transform(Jolt.java:14) ~[main/:na]
+	at com.example.jsontransform.detail.VehicleDetailController.showVehicle(VehicleDetailController.java:24) ~[main/:na]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
@@ -2819,11 +2819,11 @@ Caused by: java.lang.RuntimeException: Unable to load JSON map from classPath : 
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:938) ~[spring-webmvc-4.0.8.RELEASE.jar:4.0.8.RELEASE]
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:870) ~[spring-webmvc-4.0.8.RELEASE.jar:4.0.8.RELEASE]
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:961) ~[spring-webmvc-4.0.8.RELEASE.jar:4.0.8.RELEASE]
-	... 40 common frames omitted
+	... 40 com.example.jsontransform.common frames omitted
 Caused by: java.lang.RuntimeException: Unable to load JSON list from InputStream.
 	at com.bazaarvoice.jolt.JsonUtilImpl.jsonToList(JsonUtilImpl.java:122) ~[json-utils-0.0.12.jar:na]
 	at com.bazaarvoice.jolt.JsonUtilImpl.classpathToList(JsonUtilImpl.java:187) ~[json-utils-0.0.12.jar:na]
-	... 56 common frames omitted
+	... 56 com.example.jsontransform.common frames omitted
 Caused by: com.fasterxml.jackson.databind.JsonMappingException: No content to map due to end-of-input
  at [Source: UNKNOWN; line: 1, column: 1]
 	at com.fasterxml.jackson.databind.JsonMappingException.from(JsonMappingException.java:164) ~[jackson-databind-2.3.4.jar:2.3.4]
@@ -2831,13 +2831,13 @@ Caused by: com.fasterxml.jackson.databind.JsonMappingException: No content to ma
 	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:2978) ~[jackson-databind-2.3.4.jar:2.3.4]
 	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2151) ~[jackson-databind-2.3.4.jar:2.3.4]
 	at com.bazaarvoice.jolt.JsonUtilImpl.jsonToList(JsonUtilImpl.java:119) ~[json-utils-0.0.12.jar:na]
-	... 57 common frames omitted
+	... 57 com.example.jsontransform.common frames omitted
 2015-02-13 11:29:19,412 WARN [qtp1340057206-19] o.e.jetty.servlet.ServletHandler [ServletHandler.java:563] /vehicle/628611860
 java.lang.RuntimeException: Unable to load JSON map from classPath : resources/jsontranforms/listingDetail.json
 	at com.bazaarvoice.jolt.JsonUtilImpl.classpathToList(JsonUtilImpl.java:190) ~[json-utils-0.0.12.jar:na]
 	at com.bazaarvoice.jolt.JsonUtils.classpathToList(JsonUtils.java:151) ~[json-utils-0.0.12.jar:na]
-	at util.Jolt.transform(Jolt.java:14) ~[main/:na]
-	at api.VehicleDetailController.showVehicle(VehicleDetailController.java:24) ~[main/:na]
+	at com.example.jsontransform.common.JsonTransformer.transform(Jolt.java:14) ~[main/:na]
+	at com.example.jsontransform.detail.VehicleDetailController.showVehicle(VehicleDetailController.java:24) ~[main/:na]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
@@ -2888,13 +2888,13 @@ java.lang.RuntimeException: Unable to load JSON map from classPath : resources/j
 	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82) [jetty-server-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:696) [jetty-io-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:53) [jetty-io-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-util-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-util-8.1.15.v20140411.jar:8.1.15.v20140411]
+	at org.eclipse.jetty.com.example.jsontransform.common.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-com.example.jsontransform.common-8.1.15.v20140411.jar:8.1.15.v20140411]
+	at org.eclipse.jetty.com.example.jsontransform.common.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-com.example.jsontransform.common-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_25]
 Caused by: java.lang.RuntimeException: Unable to load JSON list from InputStream.
 	at com.bazaarvoice.jolt.JsonUtilImpl.jsonToList(JsonUtilImpl.java:122) ~[json-utils-0.0.12.jar:na]
 	at com.bazaarvoice.jolt.JsonUtilImpl.classpathToList(JsonUtilImpl.java:187) ~[json-utils-0.0.12.jar:na]
-	... 56 common frames omitted
+	... 56 com.example.jsontransform.common frames omitted
 Caused by: com.fasterxml.jackson.databind.JsonMappingException: No content to map due to end-of-input
  at [Source: UNKNOWN; line: 1, column: 1]
 	at com.fasterxml.jackson.databind.JsonMappingException.from(JsonMappingException.java:164) ~[jackson-databind-2.3.4.jar:2.3.4]
@@ -2902,10 +2902,10 @@ Caused by: com.fasterxml.jackson.databind.JsonMappingException: No content to ma
 	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:2978) ~[jackson-databind-2.3.4.jar:2.3.4]
 	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2151) ~[jackson-databind-2.3.4.jar:2.3.4]
 	at com.bazaarvoice.jolt.JsonUtilImpl.jsonToList(JsonUtilImpl.java:119) ~[json-utils-0.0.12.jar:na]
-	... 57 common frames omitted
+	... 57 com.example.jsontransform.common frames omitted
 2015-02-13 11:29:19,427 DEBUG [qtp1340057206-19] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:838] DispatcherServlet with name 'dispatcherServlet' processing GET request for [/error]
 2015-02-13 11:29:19,428 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:246] Looking up handler method for path /error
-2015-02-13 11:29:19,429 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:251] Returning handler method [public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+2015-02-13 11:29:19,429 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:251] Returning handler method [public org.springframework.http.ResponseEntity<java.com.example.jsontransform.common.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
 2015-02-13 11:29:19,429 DEBUG [qtp1340057206-19] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:925] Last-Modified value for [/error] is: -1
 2015-02-13 11:29:19,448 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.HttpEntityMethodProcessor [AbstractMessageConverterMethodProcessor.java:145] Written [{timestamp=Fri Feb 13 11:29:19 CST 2015, status=500, error=Internal Server Error, exception=java.lang.RuntimeException, message=Unable to load JSON map from classPath : resources/jsontranforms/listingDetail.json, path=/vehicle/628611860}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@59fb7a22]
 2015-02-13 11:29:19,448 DEBUG [qtp1340057206-19] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:1012] Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
@@ -2944,8 +2944,8 @@ Caused by: com.fasterxml.jackson.databind.JsonMappingException: No content to ma
 2015-02-13 11:29:38,164 DEBUG [main] o.s.w.c.s.StandardServletEnvironment [AbstractEnvironment.java:126] Initialized StandardServletEnvironment with PropertySources [servletConfigInitParams,servletContextInitParams,jndiProperties,systemProperties,systemEnvironment]
 2015-02-13 11:29:38,626 INFO [main] o.s.w.s.h.SimpleUrlHandlerMapping [AbstractUrlHandlerMapping.java:315] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
 2015-02-13 11:29:38,766 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:114] Looking for request mappings in application context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@15eb5ee5: startup date [Fri Feb 13 11:29:35 CST 2015]; root of context hierarchy
-2015-02-13 11:29:38,777 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/vehicle/{listingId}],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.lang.String api.VehicleDetailController.showVehicle(java.lang.String)
-2015-02-13 11:29:38,779 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2015-02-13 11:29:38,777 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/vehicle/{listingId}],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.lang.String com.example.jsontransform.detail.VehicleDetailController.showVehicle(java.lang.String)
+2015-02-13 11:29:38,779 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.com.example.jsontransform.common.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
 2015-02-13 11:29:38,779 INFO [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:197] Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[text/html],custom=[]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest)
 2015-02-13 11:29:38,795 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping [AbstractDetectingUrlHandlerMapping.java:71] Looking for URL mappings in application context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@15eb5ee5: startup date [Fri Feb 13 11:29:35 CST 2015]; root of context hierarchy
 2015-02-13 11:29:38,796 DEBUG [main] o.s.w.s.h.BeanNameUrlHandlerMapping [AbstractDetectingUrlHandlerMapping.java:86] Rejected bean name 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor': no URL paths identified
@@ -3086,17 +3086,17 @@ Caused by: com.fasterxml.jackson.databind.JsonMappingException: No content to ma
 2015-02-13 11:29:39,405 INFO [Thread-12] o.mockserver.mockserver.MockServer [MockServer.java:56] MockServer starting up on port: 8082
 2015-02-13 11:29:40,953 DEBUG [qtp1340057206-19] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:838] DispatcherServlet with name 'dispatcherServlet' processing GET request for [/vehicle/628611860]
 2015-02-13 11:29:40,957 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:246] Looking up handler method for path /vehicle/628611860
-2015-02-13 11:29:40,960 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:251] Returning handler method [public java.lang.String api.VehicleDetailController.showVehicle(java.lang.String)]
+2015-02-13 11:29:40,960 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:251] Returning handler method [public java.lang.String com.example.jsontransform.detail.VehicleDetailController.showVehicle(java.lang.String)]
 2015-02-13 11:29:40,960 DEBUG [qtp1340057206-19] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:925] Last-Modified value for [/vehicle/628611860] is: -1
-2015-02-13 11:29:40,981 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:134] Resolving exception from handler [public java.lang.String api.VehicleDetailController.showVehicle(java.lang.String)]: java.lang.RuntimeException: Unable to load JSON map from classPath : /resources/jsontranforms/listingDetail.json
-2015-02-13 11:29:40,984 DEBUG [qtp1340057206-19] o.s.w.s.m.a.ResponseStatusExceptionResolver [AbstractHandlerExceptionResolver.java:134] Resolving exception from handler [public java.lang.String api.VehicleDetailController.showVehicle(java.lang.String)]: java.lang.RuntimeException: Unable to load JSON map from classPath : /resources/jsontranforms/listingDetail.json
-2015-02-13 11:29:40,984 DEBUG [qtp1340057206-19] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:134] Resolving exception from handler [public java.lang.String api.VehicleDetailController.showVehicle(java.lang.String)]: java.lang.RuntimeException: Unable to load JSON map from classPath : /resources/jsontranforms/listingDetail.json
+2015-02-13 11:29:40,981 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:134] Resolving exception from handler [public java.lang.String com.example.jsontransform.detail.VehicleDetailController.showVehicle(java.lang.String)]: java.lang.RuntimeException: Unable to load JSON map from classPath : /resources/jsontranforms/listingDetail.json
+2015-02-13 11:29:40,984 DEBUG [qtp1340057206-19] o.s.w.s.m.a.ResponseStatusExceptionResolver [AbstractHandlerExceptionResolver.java:134] Resolving exception from handler [public java.lang.String com.example.jsontransform.detail.VehicleDetailController.showVehicle(java.lang.String)]: java.lang.RuntimeException: Unable to load JSON map from classPath : /resources/jsontranforms/listingDetail.json
+2015-02-13 11:29:40,984 DEBUG [qtp1340057206-19] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:134] Resolving exception from handler [public java.lang.String com.example.jsontransform.detail.VehicleDetailController.showVehicle(java.lang.String)]: java.lang.RuntimeException: Unable to load JSON map from classPath : /resources/jsontranforms/listingDetail.json
 2015-02-13 11:29:40,992 DEBUG [qtp1340057206-19] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java:984] Could not complete request
 java.lang.RuntimeException: Unable to load JSON map from classPath : /resources/jsontranforms/listingDetail.json
 	at com.bazaarvoice.jolt.JsonUtilImpl.classpathToList(JsonUtilImpl.java:190) ~[json-utils-0.0.12.jar:na]
 	at com.bazaarvoice.jolt.JsonUtils.classpathToList(JsonUtils.java:151) ~[json-utils-0.0.12.jar:na]
-	at util.Jolt.transform(Jolt.java:14) ~[main/:na]
-	at api.VehicleDetailController.showVehicle(VehicleDetailController.java:24) ~[main/:na]
+	at com.example.jsontransform.common.JsonTransformer.transform(Jolt.java:14) ~[main/:na]
+	at com.example.jsontransform.detail.VehicleDetailController.showVehicle(VehicleDetailController.java:24) ~[main/:na]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
@@ -3147,13 +3147,13 @@ java.lang.RuntimeException: Unable to load JSON map from classPath : /resources/
 	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82) [jetty-server-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:696) [jetty-io-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:53) [jetty-io-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-util-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-util-8.1.15.v20140411.jar:8.1.15.v20140411]
+	at org.eclipse.jetty.com.example.jsontransform.common.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-com.example.jsontransform.common-8.1.15.v20140411.jar:8.1.15.v20140411]
+	at org.eclipse.jetty.com.example.jsontransform.common.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-com.example.jsontransform.common-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_25]
 Caused by: java.lang.RuntimeException: Unable to load JSON list from InputStream.
 	at com.bazaarvoice.jolt.JsonUtilImpl.jsonToList(JsonUtilImpl.java:122) ~[json-utils-0.0.12.jar:na]
 	at com.bazaarvoice.jolt.JsonUtilImpl.classpathToList(JsonUtilImpl.java:187) ~[json-utils-0.0.12.jar:na]
-	... 56 common frames omitted
+	... 56 com.example.jsontransform.common frames omitted
 Caused by: com.fasterxml.jackson.databind.JsonMappingException: No content to map due to end-of-input
  at [Source: UNKNOWN; line: 1, column: 1]
 	at com.fasterxml.jackson.databind.JsonMappingException.from(JsonMappingException.java:164) ~[jackson-databind-2.3.4.jar:2.3.4]
@@ -3161,9 +3161,9 @@ Caused by: com.fasterxml.jackson.databind.JsonMappingException: No content to ma
 	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:2978) ~[jackson-databind-2.3.4.jar:2.3.4]
 	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2151) ~[jackson-databind-2.3.4.jar:2.3.4]
 	at com.bazaarvoice.jolt.JsonUtilImpl.jsonToList(JsonUtilImpl.java:119) ~[json-utils-0.0.12.jar:na]
-	... 57 common frames omitted
+	... 57 com.example.jsontransform.common frames omitted
 2015-02-13 11:29:40,999 WARN [qtp1340057206-19] o.e.jetty.servlet.ServletHandler [ServletHandler.java:538] 
-org.springframework.web.util.NestedServletException: Request processing failed; nested exception is java.lang.RuntimeException: Unable to load JSON map from classPath : /resources/jsontranforms/listingDetail.json
+org.springframework.web.com.example.jsontransform.common.NestedServletException: Request processing failed; nested exception is java.lang.RuntimeException: Unable to load JSON map from classPath : /resources/jsontranforms/listingDetail.json
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:973) ~[spring-webmvc-4.0.8.RELEASE.jar:4.0.8.RELEASE]
 	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:852) ~[spring-webmvc-4.0.8.RELEASE.jar:4.0.8.RELEASE]
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:735) ~[javax.servlet-3.0.0.v201112011016.jar:na]
@@ -3202,14 +3202,14 @@ org.springframework.web.util.NestedServletException: Request processing failed; 
 	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82) [jetty-server-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:696) [jetty-io-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:53) [jetty-io-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-util-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-util-8.1.15.v20140411.jar:8.1.15.v20140411]
+	at org.eclipse.jetty.com.example.jsontransform.common.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-com.example.jsontransform.common-8.1.15.v20140411.jar:8.1.15.v20140411]
+	at org.eclipse.jetty.com.example.jsontransform.common.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-com.example.jsontransform.common-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_25]
 Caused by: java.lang.RuntimeException: Unable to load JSON map from classPath : /resources/jsontranforms/listingDetail.json
 	at com.bazaarvoice.jolt.JsonUtilImpl.classpathToList(JsonUtilImpl.java:190) ~[json-utils-0.0.12.jar:na]
 	at com.bazaarvoice.jolt.JsonUtils.classpathToList(JsonUtils.java:151) ~[json-utils-0.0.12.jar:na]
-	at util.Jolt.transform(Jolt.java:14) ~[main/:na]
-	at api.VehicleDetailController.showVehicle(VehicleDetailController.java:24) ~[main/:na]
+	at com.example.jsontransform.common.JsonTransformer.transform(Jolt.java:14) ~[main/:na]
+	at com.example.jsontransform.detail.VehicleDetailController.showVehicle(VehicleDetailController.java:24) ~[main/:na]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
@@ -3223,11 +3223,11 @@ Caused by: java.lang.RuntimeException: Unable to load JSON map from classPath : 
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:938) ~[spring-webmvc-4.0.8.RELEASE.jar:4.0.8.RELEASE]
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:870) ~[spring-webmvc-4.0.8.RELEASE.jar:4.0.8.RELEASE]
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:961) ~[spring-webmvc-4.0.8.RELEASE.jar:4.0.8.RELEASE]
-	... 40 common frames omitted
+	... 40 com.example.jsontransform.common frames omitted
 Caused by: java.lang.RuntimeException: Unable to load JSON list from InputStream.
 	at com.bazaarvoice.jolt.JsonUtilImpl.jsonToList(JsonUtilImpl.java:122) ~[json-utils-0.0.12.jar:na]
 	at com.bazaarvoice.jolt.JsonUtilImpl.classpathToList(JsonUtilImpl.java:187) ~[json-utils-0.0.12.jar:na]
-	... 56 common frames omitted
+	... 56 com.example.jsontransform.common frames omitted
 Caused by: com.fasterxml.jackson.databind.JsonMappingException: No content to map due to end-of-input
  at [Source: UNKNOWN; line: 1, column: 1]
 	at com.fasterxml.jackson.databind.JsonMappingException.from(JsonMappingException.java:164) ~[jackson-databind-2.3.4.jar:2.3.4]
@@ -3235,13 +3235,13 @@ Caused by: com.fasterxml.jackson.databind.JsonMappingException: No content to ma
 	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:2978) ~[jackson-databind-2.3.4.jar:2.3.4]
 	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2151) ~[jackson-databind-2.3.4.jar:2.3.4]
 	at com.bazaarvoice.jolt.JsonUtilImpl.jsonToList(JsonUtilImpl.java:119) ~[json-utils-0.0.12.jar:na]
-	... 57 common frames omitted
+	... 57 com.example.jsontransform.common frames omitted
 2015-02-13 11:29:41,014 WARN [qtp1340057206-19] o.e.jetty.servlet.ServletHandler [ServletHandler.java:563] /vehicle/628611860
 java.lang.RuntimeException: Unable to load JSON map from classPath : /resources/jsontranforms/listingDetail.json
 	at com.bazaarvoice.jolt.JsonUtilImpl.classpathToList(JsonUtilImpl.java:190) ~[json-utils-0.0.12.jar:na]
 	at com.bazaarvoice.jolt.JsonUtils.classpathToList(JsonUtils.java:151) ~[json-utils-0.0.12.jar:na]
-	at util.Jolt.transform(Jolt.java:14) ~[main/:na]
-	at api.VehicleDetailController.showVehicle(VehicleDetailController.java:24) ~[main/:na]
+	at com.example.jsontransform.common.JsonTransformer.transform(Jolt.java:14) ~[main/:na]
+	at com.example.jsontransform.detail.VehicleDetailController.showVehicle(VehicleDetailController.java:24) ~[main/:na]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
@@ -3292,13 +3292,13 @@ java.lang.RuntimeException: Unable to load JSON map from classPath : /resources/
 	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82) [jetty-server-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:696) [jetty-io-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:53) [jetty-io-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-util-8.1.15.v20140411.jar:8.1.15.v20140411]
-	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-util-8.1.15.v20140411.jar:8.1.15.v20140411]
+	at org.eclipse.jetty.com.example.jsontransform.common.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-com.example.jsontransform.common-8.1.15.v20140411.jar:8.1.15.v20140411]
+	at org.eclipse.jetty.com.example.jsontransform.common.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-com.example.jsontransform.common-8.1.15.v20140411.jar:8.1.15.v20140411]
 	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_25]
 Caused by: java.lang.RuntimeException: Unable to load JSON list from InputStream.
 	at com.bazaarvoice.jolt.JsonUtilImpl.jsonToList(JsonUtilImpl.java:122) ~[json-utils-0.0.12.jar:na]
 	at com.bazaarvoice.jolt.JsonUtilImpl.classpathToList(JsonUtilImpl.java:187) ~[json-utils-0.0.12.jar:na]
-	... 56 common frames omitted
+	... 56 com.example.jsontransform.common frames omitted
 Caused by: com.fasterxml.jackson.databind.JsonMappingException: No content to map due to end-of-input
  at [Source: UNKNOWN; line: 1, column: 1]
 	at com.fasterxml.jackson.databind.JsonMappingException.from(JsonMappingException.java:164) ~[jackson-databind-2.3.4.jar:2.3.4]
@@ -3306,11 +3306,195 @@ Caused by: com.fasterxml.jackson.databind.JsonMappingException: No content to ma
 	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:2978) ~[jackson-databind-2.3.4.jar:2.3.4]
 	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2151) ~[jackson-databind-2.3.4.jar:2.3.4]
 	at com.bazaarvoice.jolt.JsonUtilImpl.jsonToList(JsonUtilImpl.java:119) ~[json-utils-0.0.12.jar:na]
-	... 57 common frames omitted
+	... 57 com.example.jsontransform.common frames omitted
 2015-02-13 11:29:41,029 DEBUG [qtp1340057206-19] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:838] DispatcherServlet with name 'dispatcherServlet' processing GET request for [/error]
 2015-02-13 11:29:41,036 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:246] Looking up handler method for path /error
-2015-02-13 11:29:41,038 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:251] Returning handler method [public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+2015-02-13 11:29:41,038 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.RequestMappingHandlerMapping [AbstractHandlerMethodMapping.java:251] Returning handler method [public org.springframework.http.ResponseEntity<java.com.example.jsontransform.common.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
 2015-02-13 11:29:41,038 DEBUG [qtp1340057206-19] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:925] Last-Modified value for [/error] is: -1
 2015-02-13 11:29:41,063 DEBUG [qtp1340057206-19] o.s.w.s.m.m.a.HttpEntityMethodProcessor [AbstractMessageConverterMethodProcessor.java:145] Written [{timestamp=Fri Feb 13 11:29:41 CST 2015, status=500, error=Internal Server Error, exception=java.lang.RuntimeException, message=Unable to load JSON map from classPath : /resources/jsontranforms/listingDetail.json, path=/vehicle/628611860}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@49f6f3cb]
 2015-02-13 11:29:41,064 DEBUG [qtp1340057206-19] o.s.web.servlet.DispatcherServlet [DispatcherServlet.java:1012] Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
 2015-02-13 11:29:41,064 DEBUG [qtp1340057206-19] o.s.web.servlet.DispatcherServlet [FrameworkServlet.java:991] Successfully completed request
+2015-03-02 21:01:29,789 INFO [Thread-12] o.mockserver.mockserver.MockServer [MockServer.java:56] MockServer starting up on port: 8082
+2015-03-02 21:03:04,250 INFO [Thread-12] o.mockserver.mockserver.MockServer [MockServer.java:56] MockServer starting up on port: 8082
+2015-03-02 21:05:10,328 INFO [Thread-12] o.mockserver.mockserver.MockServer [MockServer.java:56] MockServer starting up on port: 8082
+2015-03-02 21:08:43,597 INFO [Thread-2] o.mockserver.mockserver.MockServer [MockServer.java:56] MockServer starting up on port: 8082
+2015-03-02 21:10:43,280 INFO [Thread-2] o.mockserver.mockserver.MockServer [MockServer.java:56] MockServer starting up on port: 8082
+2015-03-02 21:12:10,332 INFO [Thread-2] o.mockserver.mockserver.MockServer [MockServer.java:56] MockServer starting up on port: 8082
+2015-03-02 21:12:34,194 INFO [Thread-2] o.mockserver.mockserver.MockServer [MockServer.java:56] MockServer starting up on port: 8082
+2015-03-02 21:14:13,948 WARN [main] o.s.w.c.s.GenericWebApplicationContext [AbstractApplicationContext.java:489] Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'vehicleDetailController': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.example.jsontransform.common.JsonTransformer com.example.jsontransform.detail.VehicleDetailController.jsonTransformer; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.example.jsontransform.common.JsonTransformer] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:301) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1186) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:706) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:762) ~[spring-context-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482) ~[spring-context-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:691) [spring-boot-1.1.10.RELEASE.jar:1.1.10.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:320) [spring-boot-1.1.10.RELEASE.jar:1.1.10.RELEASE]
+	at org.springframework.boot.test.SpringApplicationContextLoader.loadContext(SpringApplicationContextLoader.java:107) [spring-boot-1.1.10.RELEASE.jar:1.1.10.RELEASE]
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:69) [spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:95) [spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:98) [spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:161) [spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:101) [spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:331) [spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:213) [spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:290) [spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:292) [spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:233) [spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:87) [spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71) [spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:176) [spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160) [junit-4.11.jar:na]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:74) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:211) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:67) [junit-rt.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134) [idea_rt.jar:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.example.jsontransform.common.JsonTransformer com.example.jsontransform.detail.VehicleDetailController.jsonTransformer; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.example.jsontransform.common.JsonTransformer] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:522) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:298) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	... 43 com.example.jsontransform.common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.example.jsontransform.common.JsonTransformer] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1118) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:967) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:862) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:494) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	... 45 com.example.jsontransform.common frames omitted
+2015-03-02 21:14:13,983 ERROR [main] o.s.boot.SpringApplication [SpringApplication.java:338] com.example.jsontransform.Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'vehicleDetailController': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.example.jsontransform.common.JsonTransformer com.example.jsontransform.detail.VehicleDetailController.jsonTransformer; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.example.jsontransform.common.JsonTransformer] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:301) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1186) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:706) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:762) ~[spring-context-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482) ~[spring-context-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:691) ~[spring-boot-1.1.10.RELEASE.jar:1.1.10.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:320) ~[spring-boot-1.1.10.RELEASE.jar:1.1.10.RELEASE]
+	at org.springframework.boot.test.SpringApplicationContextLoader.loadContext(SpringApplicationContextLoader.java:107) [spring-boot-1.1.10.RELEASE.jar:1.1.10.RELEASE]
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:69) [spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:95) [spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:98) [spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:161) [spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:101) [spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:331) [spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:213) [spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:290) [spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:292) [spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:233) [spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:87) [spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71) [spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:176) [spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160) [junit-4.11.jar:na]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:74) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:211) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:67) [junit-rt.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134) [idea_rt.jar:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.example.jsontransform.common.JsonTransformer com.example.jsontransform.detail.VehicleDetailController.jsonTransformer; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.example.jsontransform.common.JsonTransformer] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:522) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:298) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	... 43 com.example.jsontransform.common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.example.jsontransform.common.JsonTransformer] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1118) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:967) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:862) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:494) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	... 45 com.example.jsontransform.common frames omitted
+2015-03-02 21:14:14,030 ERROR [main] o.s.test.context.TestContextManager [TestContextManager.java:334] Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@704f1591] to prepare test instance [com.example.jsontransform.acceptance.VehicleDetailAcceptanceTest@58fb7731]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:103) ~[spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:98) ~[spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:161) ~[spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:101) ~[spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:331) ~[spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:213) [spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:290) [spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:292) [spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:233) [spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:87) [spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53) [junit-4.11.jar:na]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71) [spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309) [junit-4.11.jar:na]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:176) [spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160) [junit-4.11.jar:na]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:74) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:211) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:67) [junit-rt.jar:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_25]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_25]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_25]
+	at java.lang.reflect.Method.invoke(Method.java:483) ~[na:1.8.0_25]
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:134) [idea_rt.jar:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'vehicleDetailController': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.example.jsontransform.common.JsonTransformer com.example.jsontransform.detail.VehicleDetailController.jsonTransformer; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.example.jsontransform.common.JsonTransformer] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:301) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1186) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:706) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:762) ~[spring-context-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482) ~[spring-context-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:691) ~[spring-boot-1.1.10.RELEASE.jar:1.1.10.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:320) ~[spring-boot-1.1.10.RELEASE.jar:1.1.10.RELEASE]
+	at org.springframework.boot.test.SpringApplicationContextLoader.loadContext(SpringApplicationContextLoader.java:107) ~[spring-boot-1.1.10.RELEASE.jar:1.1.10.RELEASE]
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:69) ~[spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:95) ~[spring-test-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	... 28 com.example.jsontransform.common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.example.jsontransform.common.JsonTransformer com.example.jsontransform.detail.VehicleDetailController.jsonTransformer; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.example.jsontransform.common.JsonTransformer] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:522) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:298) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	... 43 com.example.jsontransform.common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.example.jsontransform.common.JsonTransformer] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1118) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:967) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:862) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:494) ~[spring-beans-4.0.8.RELEASE.jar:4.0.8.RELEASE]
+	... 45 com.example.jsontransform.common frames omitted
+2015-03-02 21:16:29,275 INFO [Thread-2] o.mockserver.mockserver.MockServer [MockServer.java:56] MockServer starting up on port: 8082
+2015-03-02 21:40:33,431 INFO [Thread-2] o.mockserver.mockserver.MockServer [MockServer.java:56] MockServer starting up on port: 8082
+2015-03-02 21:45:01,874 INFO [Thread-2] o.mockserver.mockserver.MockServer [MockServer.java:56] MockServer starting up on port: 8082
